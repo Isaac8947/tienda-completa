@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Cart Remove</title>
+</head>
+<body>
+    <h1>Test Cart Remove</h1>
+    <button onclick="testRemove()">Test Remove Product (ID: 1)</button>
+    <div id="result"></div>
+
+    <script>
+        async function testRemove() {
+            try {
+                const response = await fetch('cart-remove.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: 'id=1'
+                });
+                
+                const responseText = await response.text();
+                console.log('Response text:', responseText);
+                document.getElementById('result').innerHTML = '<pre>' + responseText + '</pre>';
+                
+                try {
+                    const data = JSON.parse(responseText);
+                    console.log('Parsed JSON:', data);
+                } catch (parseError) {
+                    console.error('Error parsing JSON:', parseError);
+                    document.getElementById('result').innerHTML += '<br><strong>Error parsing JSON:</strong> ' + parseError.message;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('result').innerHTML = '<strong>Error:</strong> ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Debug - Procesar Pedido</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .success { color: green; }
+        .error { color: red; }
+        .info { color: blue; }
+        .debug { background: #f5f5f5; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        pre { background: #333; color: #fff; padding: 10px; border-radius: 5px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h2>🔧 Debug Test - Procesar Pedido</h2>
+    
+    <div id="result"></div>
+    
+    <script>
+        async function testProcesarPedido() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<p class="info">🔄 Iniciando test...</p>';
+            
+            try {
+                // Simular datos del formulario
+                const formData = new FormData();
+                formData.append('firstName', 'Ana');
+                formData.append('lastName', 'García');
+                formData.append('phone', '3123456789');
+                formData.append('email', 'ana@test.com');
+                formData.append('department', 'Bogotá');
+                formData.append('city', 'Bogotá');
+                formData.append('address', 'Calle 123 #45-67');
+                formData.append('cedula', '12345678');
+                formData.append('notes', 'Pedido de prueba desde debug');
+                formData.append('terms', 'on');
+                
+                resultDiv.innerHTML += '<p class="info">📋 Datos del formulario preparados</p>';
+                
+                // Hacer la petición
+                resultDiv.innerHTML += '<p class="info">📡 Enviando petición a procesar-pedido.php...</p>';
+                
+                const response = await fetch('procesar-pedido.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                resultDiv.innerHTML += `<p class="info">📈 Status HTTP: ${response.status}</p>`;
+                resultDiv.innerHTML += `<p class="info">📋 Content-Type: ${response.headers.get('content-type')}</p>`;
+                
+                // Obtener el texto raw de la respuesta
+                const responseText = await response.text();
+                
+                resultDiv.innerHTML += '<div class="debug"><strong>📄 Respuesta RAW:</strong><pre>' + 
+                                      escapeHtml(responseText) + '</pre></div>';
+                
+                // Intentar parsear como JSON
+                try {
+                    const data = JSON.parse(responseText);
+                    resultDiv.innerHTML += '<p class="success">✅ JSON válido parseado</p>';
+                    
+                    resultDiv.innerHTML += '<div class="debug"><strong>📊 Datos JSON:</strong><pre>' + 
+                                          JSON.stringify(data, null, 2) + '</pre></div>';
+                    
+                    if (data.success) {
+                        resultDiv.innerHTML += '<p class="success">🎉 Pedido procesado exitosamente!</p>';
+                        if (data.order_id) {
+                            resultDiv.innerHTML += `<p class="success">📝 Order ID: ${data.order_id}</p>`;
+                        }
+                        if (data.whatsapp_url) {
+                            resultDiv.innerHTML += `<p class="info">📱 WhatsApp URL generada</p>`;
+                        }
+                    } else {
+                        resultDiv.innerHTML += `<p class="error">❌ Error: ${data.message}</p>`;
+                    }
+                    
+                } catch (jsonError) {
+                    resultDiv.innerHTML += '<p class="error">❌ Error parseando JSON: ' + jsonError.message + '</p>';
+                    resultDiv.innerHTML += '<p class="error">🔍 La respuesta no es JSON válido</p>';
+                }
+                
+            } catch (error) {
+                resultDiv.innerHTML += '<p class="error">❌ Error en la petición: ' + error.message + '</p>';
+            }
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        // Ejecutar test automáticamente
+        document.addEventListener('DOMContentLoaded', testProcesarPedido);
+    </script>
+</body>
+</html>

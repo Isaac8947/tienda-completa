@@ -1,0 +1,72 @@
+<?php
+session_start();
+
+require_once 'config/database.php';
+
+header('Content-Type: application/json');
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(['success' => false, 'message' => 'Método no permitido']);
+    exit;
+}
+
+$data = json_decode(file_get_contents('php://input'), true);
+$review_id = isset($data['review_id']) ? intval($data['review_id']) : 0;
+$user_id = isset($_SESSION['customer_id']) ? $_SESSION['customer_id'] : null;
+
+if (!$review_id) {
+    echo json_encode(['success' => false, 'message' => 'ID de reseña requerido']);
+    exit;
+}
+
+if (!$user_id) {
+    echo json_encode(['success' => false, 'message' => 'Debes iniciar sesión para dar like']);
+    exit;
+}
+
+try {
+    $db = new Database();
+    $conn = $db->getConnection();
+    
+    // Check if user already liked this review
+    $checkSql = "SELECT id FROM review_likes WHERE review_id = ? AND user_id = ?";
+    $checkStmt = $conn->prepare($checkSql);
+    $checkStmt->execute([$review_id, $user_id]);
+    $existingLike = $checkStmt->fetch();
+    
+    if ($existingLike) {
+        // Remove like
+        $deleteSql = "DELETE FROM review_likes WHERE review_id = ? AND user_id = ?";
+        $deleteStmt = $conn->prepare($deleteSql);
+        $deleteStmt->execute([$review_id, $user_id]);
+        $action = 'removed';
+    } else {
+        // Add like
+        $insertSql = "INSERT INTO review_likes (review_id, user_id, created_at) VALUES (?, ?, NOW())";
+        $insertStmt = $conn->prepare($insertSql);
+        $insertStmt->execute([$review_id, $user_id]);
+        $action = 'added';
+    }
+    
+    // Get updated like count
+    $countSql = "SELECT COUNT(*) as like_count FROM review_likes WHERE review_id = ?";
+    $countStmt = $conn->prepare($countSql);
+    $countStmt->execute([$review_id]);
+    $likeCount = $countStmt->fetch()['like_count'];
+    
+    echo json_encode([
+        'success' => true,
+        'action' => $action,
+        'like_count' => $likeCount,
+        'message' => $action === 'added' ? 'Like agregado' : 'Like removido'
+    ]);
+    
+} catch (Exception $e) {
+    error_log("Error in review-like.php: " . $e->getMessage());
+    echo json_encode([
+        'success' => false,
+        'message' => 'Error al procesar el like'
+    ]);
+}
+?>

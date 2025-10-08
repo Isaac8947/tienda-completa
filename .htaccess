@@ -1,0 +1,138 @@
+# Configuración para Odisea Makeup Store
+# Archivo .htaccess para manejo de URLs y redirecciones
+
+# Habilitar el motor de reescritura
+RewriteEngine On
+
+# Configuración de seguridad básica
+Options -Indexes
+ServerSignature Off
+
+# Proteger archivos sensibles
+<Files ~ "^\.">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Proteger archivos de configuración
+<FilesMatch "^(config|includes|models)/">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Proteger archivos PHP en carpetas específicas
+<FilesMatch "^(_tests|_utils|_backups|_deprecated)/.*\.php$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Configuración de tipos MIME
+AddType text/css .css
+AddType application/javascript .js
+AddType image/webp .webp
+
+# Configuración de caché para recursos estáticos
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 6 months"
+    ExpiresByType image/jpg "access plus 6 months"
+    ExpiresByType image/jpeg "access plus 6 months"
+    ExpiresByType image/gif "access plus 6 months"
+    ExpiresByType image/webp "access plus 6 months"
+</IfModule>
+
+# Compresión GZIP
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Redirecciones amigables para productos
+# Permitir URLs como: /producto/nombre-del-producto o /producto/123
+RewriteRule ^producto/([0-9]+)/?$ product.php?id=$1 [L,QSA]
+RewriteRule ^producto/([a-zA-Z0-9\-_]+)/?$ product.php?slug=$1 [L,QSA]
+
+# Redirecciones para detalles de productos
+# Permitir URLs como: /detalles/123 o /producto-detalles/123
+RewriteRule ^detalles/([0-9]+)/?$ product-details.php?id=$1 [L,QSA]
+RewriteRule ^producto-detalles/([0-9]+)/?$ product-details.php?id=$1 [L,QSA]
+
+# Redirecciones para categorías
+RewriteRule ^categoria/([a-zA-Z0-9\-_]+)/?$ categoria.php?slug=$1 [L,QSA]
+
+# Redirecciones para marcas
+RewriteRule ^marca/([a-zA-Z0-9\-_]+)/?$ marcas.php?marca=$1 [L,QSA]
+
+# Redirección para búsquedas
+RewriteRule ^buscar/([^/]+)/?$ search.php?q=$1 [L,QSA]
+
+# Manejo de errores personalizados
+ErrorDocument 404 /odisea-makeup-store/404.php
+ErrorDocument 403 /odisea-makeup-store/404.php
+ErrorDocument 500 /odisea-makeup-store/404.php
+
+# Redirecciones de páginas principales (opcional)
+# Si quieres URLs más limpias, descomenta estas líneas:
+# RewriteRule ^inicio/?$ index.php [L,QSA]
+# RewriteRule ^catalogo/?$ catalogo.php [L,QSA]
+# RewriteRule ^ofertas/?$ ofertas.php [L,QSA]
+# RewriteRule ^carrito/?$ carrito.php [L,QSA]
+# RewriteRule ^mi-cuenta/?$ mi-cuenta.php [L,QSA]
+
+# Forzar HTTPS (descomenta si tienes certificado SSL)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirección de www a no-www (opcional)
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+# RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# Prevenir acceso directo a archivos PHP en carpetas admin
+<FilesMatch "^(admin|admin-pages)/.*\.php$">
+    # Permitir solo archivos específicos
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^.*$ /odisea-makeup-store/404.php [L]
+</FilesMatch>
+
+# Configuración para manejo de sesiones PHP
+php_value session.gc_maxlifetime 3600
+php_value session.cookie_lifetime 0
+
+# Configuración de memoria y tiempo de ejecución
+php_value memory_limit 256M
+php_value max_execution_time 300
+php_value upload_max_filesize 50M
+php_value post_max_size 50M
+
+# Headers de seguridad
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options SAMEORIGIN
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Configuración específica para archivos de imagen
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|svg)$">
+    <IfModule mod_headers.c>
+        Header set Cache-Control "public, max-age=2592000"
+    </IfModule>
+</FilesMatch>
+
+# Permitir CORS para recursos necesarios (si usas APIs externas)
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+# Fin del archivo .htaccess

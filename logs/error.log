@@ -1,0 +1,147 @@
+[08-Sep-2025 19:59:39 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 19:59:39 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:04:40 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 20:04:40 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:09:41 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 20:09:41 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:14:42 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 20:14:42 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:19:43 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 20:19:43 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:21:12 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 20:21:12 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:21:28 America/Bogota] Error obteniendo estadísticas de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:39:57 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 20:39:57 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:40:18 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 20:40:18 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:42:15 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 20:42:15 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:44:02 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 20:44:02 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:44:38 America/Bogota] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\odisea-makeup-store\admin\invoices.php on line 192
+[08-Sep-2025 20:44:38 America/Bogota] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\odisea-makeup-store\admin\invoices.php on line 192
+[08-Sep-2025 20:44:38 America/Bogota] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\odisea-makeup-store\admin\invoices.php on line 192
+[08-Sep-2025 20:47:16 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 20:47:16 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:48:07 America/Bogota] PHP Warning:  Undefined array key "city" in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 160
+[08-Sep-2025 20:48:07 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 186
+[08-Sep-2025 20:48:07 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 186
+[08-Sep-2025 20:48:07 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 187
+[08-Sep-2025 20:48:07 America/Bogota] PHP Fatal error:  Uncaught TypeError: nl2br(): Argument #1 ($string) must be of type string, array given in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php:193
+Stack trace:
+#0 C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php(193): nl2br(Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 193
+[08-Sep-2025 20:49:24 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 221
+[08-Sep-2025 20:49:24 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 221
+[08-Sep-2025 20:49:24 America/Bogota] PHP Warning:  Array to string conversion in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 223
+[08-Sep-2025 20:49:24 America/Bogota] PHP Warning:  Undefined array key "shipping_city" in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 224
+[08-Sep-2025 20:49:24 America/Bogota] PHP Warning:  Undefined array key "shipping_postal_code" in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 225
+[08-Sep-2025 20:49:24 America/Bogota] PHP Warning:  Undefined array key "shipping_country" in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 226
+[08-Sep-2025 20:49:24 America/Bogota] PHP Warning:  Undefined array key "discount" in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 276
+[08-Sep-2025 20:49:24 America/Bogota] PHP Warning:  Undefined array key "shipping_cost" in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 285
+[08-Sep-2025 20:49:24 America/Bogota] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 285
+[08-Sep-2025 20:50:10 America/Bogota] PHP Warning:  Undefined array key "discount" in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 303
+[08-Sep-2025 20:50:10 America/Bogota] PHP Warning:  Undefined array key "shipping_cost" in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 312
+[08-Sep-2025 20:50:10 America/Bogota] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\xampp\htdocs\odisea-makeup-store\admin-pages\invoices.php on line 312
+[08-Sep-2025 20:52:17 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 20:52:17 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:52:31 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\odisea-makeup-store\admin-pages\orders.php on line 167
+[08-Sep-2025 20:52:31 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\odisea-makeup-store\admin-pages\orders.php on line 167
+[08-Sep-2025 20:52:31 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\odisea-makeup-store\admin-pages\orders.php on line 168
+[08-Sep-2025 20:52:31 America/Bogota] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\odisea-makeup-store\admin-pages\orders.php on line 169
+[08-Sep-2025 20:52:31 America/Bogota] PHP Warning:  Array to string conversion in C:\xampp\htdocs\odisea-makeup-store\admin-pages\orders.php on line 177
+[08-Sep-2025 20:52:31 America/Bogota] PHP Warning:  Undefined array key "shipping_city" in C:\xampp\htdocs\odisea-makeup-store\admin-pages\orders.php on line 178
+[08-Sep-2025 20:52:31 America/Bogota] PHP Warning:  Undefined array key "shipping_postal_code" in C:\xampp\htdocs\odisea-makeup-store\admin-pages\orders.php on line 179
+[08-Sep-2025 20:52:31 America/Bogota] PHP Warning:  Undefined array key "shipping_country" in C:\xampp\htdocs\odisea-makeup-store\admin-pages\orders.php on line 180
+[08-Sep-2025 20:52:31 America/Bogota] PHP Warning:  Undefined array key "shipping_cost" in C:\xampp\htdocs\odisea-makeup-store\admin-pages\orders.php on line 230
+[08-Sep-2025 20:52:31 America/Bogota] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\xampp\htdocs\odisea-makeup-store\admin-pages\orders.php on line 230
+[08-Sep-2025 20:52:31 America/Bogota] PHP Warning:  Undefined array key "discount" in C:\xampp\htdocs\odisea-makeup-store\admin-pages\orders.php on line 232
+[08-Sep-2025 20:54:38 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 20:54:38 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:54:42 America/Bogota] Error obteniendo estadísticas de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:54:46 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 20:54:46 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:54:49 America/Bogota] Error obteniendo estadísticas de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:57:18 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 20:57:18 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 20:59:40 America/Bogota] Error obteniendo estadísticas de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:00:39 America/Bogota] Error obteniendo estadísticas de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:02:19 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 21:02:19 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:04:02 America/Bogota] Error getting movement stats: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'movement_type' in 'field list'
+[08-Sep-2025 21:04:02 America/Bogota] Error getting inventory stats: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ih.movement_type' in 'field list'
+[08-Sep-2025 21:04:17 America/Bogota] Error obteniendo estadísticas de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:04:25 America/Bogota] Error obteniendo estadísticas de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:05:57 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 21:05:57 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:06:00 America/Bogota] Error obteniendo estadísticas de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:07:20 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 21:07:20 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:12:21 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 21:12:21 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:17:23 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 21:17:23 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:22:25 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 21:22:25 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:27:27 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 21:27:27 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:28:19 America/Bogota] Error en recordMovement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[08-Sep-2025 21:28:19 America/Bogota] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\xampp\htdocs\odisea-makeup-store\admin\gestion-pedidos.php:137
+Stack trace:
+#0 C:\xampp\htdocs\odisea-makeup-store\admin\gestion-pedidos.php(137): PDO->rollBack()
+#1 {main}
+  thrown in C:\xampp\htdocs\odisea-makeup-store\admin\gestion-pedidos.php on line 137
+[08-Sep-2025 21:28:44 America/Bogota] ORDER STATUS CHANGE - Order ID: 7, From: pending, To: cancelled, By: admin, Reason: , IP: ::1, Time: 2025-09-08 21:28:44
+[08-Sep-2025 21:29:21 America/Bogota] ORDER STATUS CHANGE - Order ID: 8, From: pending, To: delivered, By: admin, Reason: , IP: ::1, Time: 2025-09-08 21:29:21
+[08-Sep-2025 21:29:42 America/Bogota] Error en recordMovement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[08-Sep-2025 21:29:42 America/Bogota] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\xampp\htdocs\odisea-makeup-store\admin\gestion-pedidos.php:137
+Stack trace:
+#0 C:\xampp\htdocs\odisea-makeup-store\admin\gestion-pedidos.php(137): PDO->rollBack()
+#1 {main}
+  thrown in C:\xampp\htdocs\odisea-makeup-store\admin\gestion-pedidos.php on line 137
+[08-Sep-2025 21:30:07 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 21:30:07 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:30:29 America/Bogota] Error obteniendo estadísticas de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:32:29 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 21:32:29 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'odisea_makeup.inventory_movements' doesn't exist
+[08-Sep-2025 21:37:31 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 21:37:31 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[08-Sep-2025 21:42:32 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 21:42:32 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[08-Sep-2025 21:47:34 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[08-Sep-2025 21:47:34 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[09-Sep-2025 16:31:42 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[09-Sep-2025 16:31:42 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[09-Sep-2025 16:36:47 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[09-Sep-2025 16:36:47 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[09-Sep-2025 16:41:49 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[09-Sep-2025 16:41:49 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[09-Sep-2025 16:46:51 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[09-Sep-2025 16:46:51 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[09-Sep-2025 16:51:53 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[09-Sep-2025 16:51:53 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[09-Sep-2025 16:56:55 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[09-Sep-2025 16:56:55 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[09-Sep-2025 17:01:57 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[09-Sep-2025 17:01:57 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[02-Oct-2025 22:14:41 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[02-Oct-2025 22:14:41 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[02-Oct-2025 22:19:43 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[02-Oct-2025 22:19:43 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[02-Oct-2025 22:24:46 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[02-Oct-2025 22:24:46 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[02-Oct-2025 22:29:48 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[02-Oct-2025 22:29:48 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[02-Oct-2025 22:34:50 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[02-Oct-2025 22:34:50 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[02-Oct-2025 22:38:20 America/Bogota] Error en pedidos recientes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.shipping_name' in 'field list'
+[02-Oct-2025 22:38:20 America/Bogota] Error en movimientos de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'quantity_change' in 'field list'
+[02-Oct-2025 22:39:40 America/Bogota] Error en recordMovement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[02-Oct-2025 22:39:40 America/Bogota] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\xampp\htdocs\odisea-makeup-store\admin\gestion-pedidos.php:137
+Stack trace:
+#0 C:\xampp\htdocs\odisea-makeup-store\admin\gestion-pedidos.php(137): PDO->rollBack()
+#1 {main}
+  thrown in C:\xampp\htdocs\odisea-makeup-store\admin\gestion-pedidos.php on line 137
+[02-Oct-2025 22:40:02 America/Bogota] ORDER STATUS CHANGE - Order ID: 11, From: pending, To: shipped, By: Administrador, Reason: , IP: ::1, Time: 2025-10-02 22:40:02

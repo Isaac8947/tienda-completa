@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="45" fill="url(#skinGrad)" opacity="0.1"/>
+  <circle cx="50" cy="50" r="30" fill="none" stroke="url(#skinGrad)" stroke-width="3" opacity="0.6"/>
+  <circle cx="50" cy="50" r="20" fill="none" stroke="url(#skinGrad)" stroke-width="2" opacity="0.8"/>
+  <circle cx="50" cy="50" r="10" fill="url(#skinGrad)" opacity="0.9"/>
+  <path d="M 35 35 Q 50 25 65 35" stroke="url(#skinGrad)" stroke-width="2" fill="none" opacity="0.7"/>
+  <path d="M 35 65 Q 50 75 65 65" stroke="url(#skinGrad)" stroke-width="2" fill="none" opacity="0.7"/>
+  <circle cx="42" cy="42" r="2" fill="white" opacity="0.8"/>
+  <circle cx="58" cy="42" r="2" fill="white" opacity="0.8"/>
+</svg>

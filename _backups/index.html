@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odisea Makeup - Tu destino para el maquillaje perfecto</title>
+    <meta name="description" content="Descubre la mejor selección de maquillaje y productos de belleza en Odisea. Marcas exclusivas, envíos a toda Colombia y la mejor experiencia de compra.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f9a8d4',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            800: '#9d174d',
+                            900: '#831843'
+                        },
+                        secondary: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12'
+                        },
+                        accent: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'scale-in': 'scaleIn 0.3s ease-out'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.9)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300" id="header">
+        <!-- Top Bar -->
+        <div class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-2">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center text-sm">
+                    <div class="flex items-center space-x-4">
+                        <span><i class="fas fa-phone mr-1"></i> +57 300 123 4567</span>
+                        <span><i class="fas fa-envelope mr-1"></i> contacto@odisea.com</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="hover:text-primary-200 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="hover:text-primary-200 transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="hover:text-primary-200 transition-colors">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="/" class="text-3xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+                        Odisea
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="hidden md:flex flex-1 max-w-lg mx-8">
+                    <div class="relative w-full">
+                        <input type="text" 
+                               placeholder="Buscar productos, marcas..." 
+                               class="w-full px-4 py-3 pr-12 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300">
+                        <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary-500 transition-colors">
+                            <i class="fas fa-search text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Header Actions -->
+                <div class="flex items-center space-x-4">
+                    <!-- User Account -->
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 text-gray-700 hover:text-primary-500 transition-colors">
+                            <i class="fas fa-user text-xl"></i>
+                            <span class="hidden lg:block">Mi Cuenta</span>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-500 transition-colors">Iniciar Sesión</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-500 transition-colors">Registrarse</a>
+                                <hr class="my-1">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-500 transition-colors">Mis Pedidos</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-500 transition-colors">Lista de Deseos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wishlist -->
+                    <button class="relative text-gray-700 hover:text-primary-500 transition-colors">
+                        <i class="fas fa-heart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-primary-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                    </button>
+
+                    <!-- Shopping Cart -->
+                    <button class="relative text-gray-700 hover:text-primary-500 transition-colors" id="cart-toggle">
+                        <i class="fas fa-shopping-bag text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-primary-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" id="cart-count">0</span>
+                    </button>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="md:hidden text-gray-700 hover:text-primary-500 transition-colors" id="mobile-menu-toggle">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="bg-gray-50 border-t border-gray-200">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between">
+                    <!-- Categories Menu -->
+                    <div class="relative group">
+                        <button class="flex items-center space-x-2 px-4 py-3 text-gray-700 hover:text-primary-500 transition-colors">
+                            <i class="fas fa-bars"></i>
+                            <span>Todas las Categorías</span>
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <!-- Mega Menu -->
+                        <div class="absolute left-0 top-full w-screen max-w-4xl bg-white shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-40">
+                            <div class="grid grid-cols-4 gap-6 p-6">
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 mb-3">Rostro</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Base de Maquillaje</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Correctores</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Rubor</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Contorno</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Iluminadores</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 mb-3">Ojos</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Sombras</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Delineadores</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Máscaras</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Cejas</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Pestañas Postizas</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 mb-3">Labios</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Labiales</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Gloss</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Delineadores</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Bálsamos</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Tintes</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 mb-3">Cuidado</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Limpiadores</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Hidratantes</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Serums</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Mascarillas</a></li>
+                                        <li><a href="#" class="text-gray-600 hover:text-primary-500 transition-colors">Protector Solar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Navigation -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#" class="text-gray-700 hover:text-primary-500 transition-colors font-medium">Inicio</a>
+                        <a href="#" class="text-gray-700 hover:text-primary-500 transition-colors font-medium">Lo Más Nuevo</a>
+                        <a href="#" class="text-gray-700 hover:text-primary-500 transition-colors font-medium">Próximamente</a>
+                        <a href="#" class="text-gray-700 hover:text-primary-500 transition-colors font-medium">Ofertas</a>
+                        <a href="#" class="text-gray-700 hover:text-primary-500 transition-colors font-medium">Marcas</a>
+                        <a href="#" class="text-gray-700 hover:text-primary-500 transition-colors font-medium">Blog</a>
+                    </div>
+
+                    <!-- Promo Banner -->
+                    <div class="hidden lg:block">
+                        <span class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-4 py-2 rounded-full text-sm font-medium animate-pulse-slow">
+                            🎉 Envío GRATIS en compras +$150.000
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+            <div class="px-4 py-4 space-y-4">
+                <!-- Mobile Search -->
+                <div class="relative">
+                    <input type="text" 
+                           placeholder="Buscar productos..." 
+                           class="w-full px-4 py-3 pr-12 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Navigation Links -->
+                <div class="space-y-2">
+                    <a href="#" class="block py-2 text-gray-700 hover:text-primary-500 transition-colors">Inicio</a>
+                    <a href="#" class="block py-2 text-gray-700 hover:text-primary-500 transition-colors">Lo Más Nuevo</a>
+                    <a href="#" class="block py-2 text-gray-700 hover:text-primary-500 transition-colors">Próximamente</a>
+                    <a href="#" class="block py-2 text-gray-700 hover:text-primary-500 transition-colors">Ofertas</a>
+                    <a href="#" class="block py-2 text-gray-700 hover:text-primary-500 transition-colors">Marcas</a>
+                    <a href="#" class="block py-2 text-gray-700 hover:text-primary-500 transition-colors">Blog</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+        <div class="container mx-auto px-4 py-16 lg:py-24">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="space-y-8" data-aos="fade-right">
+                    <div class="space-y-4">
+                        <h1 class="text-4xl lg:text-6xl font-bold leading-tight">
+                            <span class="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                                Descubre tu
+                            </span>
+                            <br>
+                            <span class="text-gray-900">belleza única</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 leading-relaxed">
+                            Explora nuestra colección exclusiva de maquillaje y productos de belleza. 
+                            Desde las últimas tendencias hasta los clásicos atemporales.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Explorar Colección
+                        </button>
+                        <button class="border-2 border-primary-500 text-primary-500 px-8 py-4 rounded-full font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300">
+                            Ver Ofertas
+                        </button>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="grid grid-cols-3 gap-6 pt-8">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-shipping-fast text-primary-500 text-xl"></i>
+                            </div>
+                            <p class="text-sm font-medium text-gray-700">Envío Gratis</p>
+                            <p class="text-xs text-gray-500">+$150.000</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-award text-secondary-500 text-xl"></i>
+                            </div>
+                            <p class="text-sm font-medium text-gray-700">Calidad Premium</p>
+                            <p class="text-xs text-gray-500">Marcas originales</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-headset text-accent-500 text-xl"></i>
+                            </div>
+                            <p class="text-sm font-medium text-gray-700">Soporte 24/7</p>
+                            <p class="text-xs text-gray-500">Siempre aquí</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative" data-aos="fade-left">
+                    <div class="relative z-10">
+                        <img src="/placeholder.svg?height=600&width=500" 
+                             alt="Modelo con maquillaje perfecto" 
+                             class="w-full h-auto rounded-3xl shadow-2xl animate-float">
+                    </div>
+                    
+                    <!-- Floating Elements -->
+                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full opacity-20 animate-bounce-slow"></div>
+                    <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-gradient-to-br from-accent-400 to-primary-400 rounded-full opacity-10 animate-pulse-slow"></div>
+                    
+                    <!-- Product Cards -->
+                    <div class="absolute top-8 -left-8 bg-white rounded-2xl shadow-lg p-4 animate-float" style="animation-delay: 1s;">
+                        <div class="flex items-center space-x-3">
+                            <img src="/placeholder.svg?height=50&width=50" alt="Producto" class="w-12 h-12 rounded-lg">
+                            <div>
+                                <p class="font-semibold text-sm">Labial Mate</p>
+                                <p class="text-primary-500 font-bold">$45.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute bottom-16 -right-8 bg-white rounded-2xl shadow-lg p-4 animate-float" style="animation-delay: 2s;">
+                        <div class="flex items-center space-x-3">
+                            <img src="/placeholder.svg?height=50&width=50" alt="Producto" class="w-12 h-12 rounded-lg">
+                            <div>
+                                <p class="font-semibold text-sm">Paleta Sombras</p>
+                                <p class="text-primary-500 font-bold">$89.000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Explora por Categorías
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Encuentra exactamente lo que buscas en nuestras categorías especializadas
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Category Cards -->
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-6 text-center hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-500 transition-colors duration-300">
+                            <i class="fas fa-palette text-2xl text-primary-500 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Rostro</h3>
+                        <p class="text-sm text-gray-600">Base, rubor, contorno</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-secondary-50 to-secondary-100 rounded-2xl p-6 text-center hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary-500 transition-colors duration-300">
+                            <i class="fas fa-eye text-2xl text-secondary-500 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Ojos</h3>
+                        <p class="text-sm text-gray-600">Sombras, delineadores</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gradient-to-br from-accent-50 to-accent-100 rounded-2xl p-6 text-center hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-500 transition-colors duration-300">
+                            <i class="fas fa-kiss-wink-heart text-2xl text-accent-500 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Labios</h3>
+                        <p class="text-sm text-gray-600">Labiales, gloss</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-6 text-center hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-500 transition-colors duration-300">
+                            <i class="fas fa-spa text-2xl text-pink-500 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Cuidado</h3>
+                        <p class="text-sm text-gray-600">Skincare, limpieza</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 text-center hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500 transition-colors duration-300">
+                            <i class="fas fa-paint-brush text-2xl text-purple-500 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Herramientas</h3>
+                        <p class="text-sm text-gray-600">Brochas, esponjas</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl p-6 text-center hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-500 transition-colors duration-300">
+                            <i class="fas fa-star text-2xl text-indigo-500 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Premium</h3>
+                        <p class="text-sm text-gray-600">Edición limitada</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Productos Destacados
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Los favoritos de nuestras clientas, seleccionados especialmente para ti
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden">
+                        <img src="/placeholder.svg?height=300&width=300" 
+                             alt="Fenty Beauty Foundation" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        
+                        <!-- Product Badges -->
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-semibold">NUEVO</span>
+                        </div>
+                        
+                        <!-- Quick Actions -->
+                        <div class="absolute top-4 right-4 space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                <i class="fas fa-eye text-sm"></i>
+                            </button>
+                        </div>
+
+                        <!-- Add to Cart Overlay -->
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <button class="w-full bg-white text-gray-900 py-2 rounded-full font-semibold hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="mb-2">
+                            <span class="text-sm text-gray-500">Fenty Beauty</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2 line-clamp-2">
+                            Pro Filt'r Soft Matte Foundation
+                        </h3>
+                        
+                        <!-- Rating -->
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                            </div>
+                            <span class="text-sm text-gray-500 ml-2">(124)</span>
+                        </div>
+                        
+                        <!-- Price -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-xl font-bold text-primary-500">$89.000</span>
+                                <span class="text-sm text-gray-400 line-through">$95.000</span>
+                            </div>
+                            <span class="text-sm text-green-600 font-semibold">-6%</span>
+                        </div>
+                        
+                        <!-- Color Options -->
+                        <div class="flex items-center space-x-2 mt-3">
+                            <span class="text-sm text-gray-600">Tonos:</span>
+                            <div class="flex space-x-1">
+                                <div class="w-4 h-4 rounded-full bg-yellow-200 border border-gray-300 cursor-pointer"></div>
+                                <div class="w-4 h-4 rounded-full bg-yellow-600 border border-gray-300 cursor-pointer"></div>
+                                <div class="w-4 h-4 rounded-full bg-yellow-800 border border-gray-300 cursor-pointer"></div>
+                                <span class="text-xs text-gray-500">+37</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden">
+                        <img src="/placeholder.svg?height=300&width=300" 
+                             alt="Urban Decay Naked Heat" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-secondary-500 text-white px-3 py-1 rounded-full text-xs font-semibold">BESTSELLER</span>
+                        </div>
+                        
+                        <div class="absolute top-4 right-4 space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                <i class="fas fa-eye text-sm"></i>
+                            </button>
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <button class="w-full bg-white text-gray-900 py-2 rounded-full font-semibold hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="mb-2">
+                            <span class="text-sm text-gray-500">Urban Decay</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2 line-clamp-2">
+                            Naked Heat Eyeshadow Palette
+                        </h3>
+                        
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                            </div>
+                            <span class="text-sm text-gray-500 ml-2">(89)</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-xl font-bold text-primary-500">$156.000</span>
+                                <span class="text-sm text-gray-400 line-through">$175.000</span>
+                            </div>
+                            <span class="text-sm text-green-600 font-semibold">-11%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden">
+                        <img src="/placeholder.svg?height=300&width=300" 
+                             alt="NARS Orgasm Blush" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        
+                        <div class="absolute top-4 right-4 space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                <i class="fas fa-eye text-sm"></i>
+                            </button>
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <button class="w-full bg-white text-gray-900 py-2 rounded-full font-semibold hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="mb-2">
+                            <span class="text-sm text-gray-500">NARS</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2 line-clamp-2">
+                            Orgasm Blush
+                        </h3>
+                        
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                            </div>
+                            <span class="text-sm text-gray-500 ml-2">(156)</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-primary-500">$78.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative overflow-hidden">
+                        <img src="/placeholder.svg?height=300&width=300" 
+                             alt="Charlotte Tilbury Pillow Talk" 
+                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-accent-500 text-white px-3 py-1 rounded-full text-xs font-semibold">TRENDING</span>
+                        </div>
+                        
+                        <div class="absolute top-4 right-4 space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                            <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                <i class="fas fa-eye text-sm"></i>
+                            </button>
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <button class="w-full bg-white text-gray-900 py-2 rounded-full font-semibold hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="mb-2">
+                            <span class="text-sm text-gray-500">Charlotte Tilbury</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2 line-clamp-2">
+                            Pillow Talk Lipstick
+                        </h3>
+                        
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                                <i class="fas fa-star text-sm"></i>
+                            </div>
+                            <span class="text-sm text-gray-500 ml-2">(203)</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-primary-500">$95.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Button -->
+            <div class="text-center mt-12" data-aos="fade-up">
+                <button class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    Ver Todos los Productos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between mb-12" data-aos="fade-up">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                        Lo Más Nuevo
+                    </h2>
+                    <p class="text-gray-600 text-lg">
+                        Las últimas tendencias en maquillaje y belleza
+                    </p>
+                </div>
+                <button class="hidden md:block border-2 border-primary-500 text-primary-500 px-6 py-3 rounded-full font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300">
+                    Ver Todo
+                </button>
+            </div>
+
+            <!-- Product Slider -->
+            <div class="relative">
+                <div class="flex space-x-6 overflow-x-auto pb-4 scrollbar-hide" id="new-arrivals-slider">
+                    <!-- New Product Cards -->
+                    <div class="flex-none w-72" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                            <div class="relative overflow-hidden">
+                                <img src="/placeholder.svg?height=250&width=300" 
+                                     alt="Rare Beauty Blush" 
+                                     class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                                
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">NUEVO</span>
+                                </div>
+                                
+                                <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                        <i class="fas fa-heart text-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="p-4">
+                                <span class="text-sm text-gray-500">Rare Beauty</span>
+                                <h3 class="font-semibold text-gray-900 mb-2">Soft Pinch Liquid Blush</h3>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-bold text-primary-500">$67.000</span>
+                                    <button class="bg-primary-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary-600 transition-colors duration-300">
+                                        Agregar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-none w-72" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                            <div class="relative overflow-hidden">
+                                <img src="/placeholder.svg?height=250&width=300" 
+                                     alt="Glossier Cloud Paint" 
+                                     class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                                
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">NUEVO</span>
+                                </div>
+                                
+                                <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                        <i class="fas fa-heart text-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="p-4">
+                                <span class="text-sm text-gray-500">Glossier</span>
+                                <h3 class="font-semibold text-gray-900 mb-2">Cloud Paint Blush</h3>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-bold text-primary-500">$54.000</span>
+                                    <button class="bg-primary-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary-600 transition-colors duration-300">
+                                        Agregar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-none w-72" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                            <div class="relative overflow-hidden">
+                                <img src="/placeholder.svg?height=250&width=300" 
+                                     alt="The Ordinary Niacinamide" 
+                                     class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                                
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">NUEVO</span>
+                                </div>
+                                
+                                <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                        <i class="fas fa-heart text-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="p-4">
+                                <span class="text-sm text-gray-500">The Ordinary</span>
+                                <h3 class="font-semibold text-gray-900 mb-2">Niacinamide 10% + Zinc 1%</h3>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-bold text-primary-500">$32.000</span>
+                                    <button class="bg-primary-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary-600 transition-colors duration-300">
+                                        Agregar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-none w-72" data-aos="fade-up" data-aos-delay="400">
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                            <div class="relative overflow-hidden">
+                                <img src="/placeholder.svg?height=250&width=300" 
+                                     alt="MAC Ruby Woo" 
+                                     class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                                
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">NUEVO</span>
+                                </div>
+                                
+                                <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                        <i class="fas fa-heart text-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="p-4">
+                                <span class="text-sm text-gray-500">MAC</span>
+                                <h3 class="font-semibold text-gray-900 mb-2">Ruby Woo Lipstick</h3>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-bold text-primary-500">$72.000</span>
+                                    <button class="bg-primary-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary-600 transition-colors duration-300">
+                                        Agregar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Navigation -->
+                <button class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors duration-300" id="prev-new">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors duration-300" id="next-new">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon -->
+    <section class="py-16 bg-gradient-to-br from-primary-50 to-secondary-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Próximamente
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Sé la primera en conocer nuestros próximos lanzamientos exclusivos
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Coming Soon Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative">
+                        <img src="/placeholder.svg?height=250&width=400" 
+                             alt="Colección Otoño" 
+                             class="w-full h-48 object-cover">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <h3 class="text-xl font-bold mb-2">Colección Otoño 2024</h3>
+                            <p class="text-sm opacity-90">Tonos cálidos y texturas aterciopeladas</p>
+                        </div>
+                        
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-secondary-500 text-white px-3 py-1 rounded-full text-xs font-semibold">SEPTIEMBRE</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary-500">Desde $45.000</span>
+                            <div class="text-right">
+                                <p class="text-sm text-gray-500">Lanzamiento</p>
+                                <p class="font-semibold text-gray-900">15 Sep 2024</p>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Notificarme
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="/placeholder.svg?height=250&width=400" 
+                             alt="Edición Limitada" 
+                             class="w-full h-48 object-cover">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <h3 class="text-xl font-bold mb-2">Edición Limitada Navidad</h3>
+                            <p class="text-sm opacity-90">Paleta exclusiva con 20 sombras</p>
+                        </div>
+                        
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-accent-500 text-white px-3 py-1 rounded-full text-xs font-semibold">DICIEMBRE</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary-500">$189.000</span>
+                            <div class="text-right">
+                                <p class="text-sm text-gray-500">Lanzamiento</p>
+                                <p class="font-semibold text-gray-900">1 Dic 2024</p>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Notificarme
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative">
+                        <img src="/placeholder.svg?height=250&width=400" 
+                             alt="Línea Skincare" 
+                             class="w-full h-48 object-cover">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <h3 class="text-xl font-bold mb-2">Línea Cuidado Facial</h3>
+                            <p class="text-sm opacity-90">Rutina completa con ingredientes naturales</p>
+                        </div>
+                        
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">OCTUBRE</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-primary-500">Desde $28.000</span>
+                            <div class="text-right">
+                                <p class="text-sm text-gray-500">Lanzamiento</p>
+                                <p class="font-semibold text-gray-900">20 Oct 2024</p>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Notificarme
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-gradient-to-r from-primary-500 to-secondary-500">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center text-white" data-aos="fade-up">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+                    Únete a la Comunidad Odisea
+                </h2>
+                <p class="text-xl mb-8 opacity-90">
+                    Recibe ofertas exclusivas, tips de belleza y sé la primera en conocer nuestros nuevos productos
+                </p>
+                
+                <div class="max-w-md mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" 
+                               placeholder="Tu email aquí..." 
+                               class="flex-1 px-6 py-4 rounded-full text-gray-900 focus:outline-none focus:ring-4 focus:ring-white/30">
+                        <button class="bg-white text-primary-500 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300">
+                            Suscribirme
+                        </button>
+                    </div>
+                    <p class="text-sm mt-4 opacity-75">
+                        Al suscribirte aceptas recibir emails promocionales. Puedes cancelar en cualquier momento.
+                    </p>
+                </div>
+                
+                <!-- Benefits -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-gift text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Ofertas Exclusivas</h3>
+                        <p class="text-sm opacity-90">Descuentos especiales solo para suscriptoras</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-star text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Acceso Anticipado</h3>
+                        <p class="text-sm opacity-90">Compra nuevos productos antes que nadie</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Tips de Belleza</h3>
+                        <p class="text-sm opacity-90">Consejos y tutoriales de expertos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent mb-4">
+                            Odisea
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Tu destino para el maquillaje perfecto. Descubre las mejores marcas y productos de belleza con la calidad que mereces.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-primary-400"></i>
+                            <span class="text-gray-300">Barranquilla, Colombia</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-primary-400"></i>
+                            <span class="text-gray-300">+57 300 123 4567</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-primary-400"></i>
+                            <span class="text-gray-300">contacto@odisea.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Enlaces Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Sobre Nosotros</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Catálogo</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Ofertas</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Service -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Atención al Cliente</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Mi Cuenta</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Mis Pedidos</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Envíos y Devoluciones</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Preguntas Frecuentes</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors duration-300">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social & Payment -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Síguenos</h4>
+                    <div class="flex space-x-4 mb-8">
+                        <a href="#" class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors duration-300">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors duration-300">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    
+                    <h5 class="font-semibold mb-4">Métodos de Pago</h5>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="bg-white rounded p-2 flex items-center justify-center">
+                            <i class="fab fa-cc-visa text-blue-600 text-xl"></i>
+                        </div>
+                        <div class="bg-white rounded p-2 flex items-center justify-center">
+                            <i class="fab fa-cc-mastercard text-red-600 text-xl"></i>
+                        </div>
+                        <div class="bg-white rounded p-2 flex items-center justify-center">
+                            <i class="fab fa-paypal text-blue-500 text-xl"></i>
+                        </div>
+                        <div class="bg-white rounded p-2 flex items-center justify-center text-xs font-bold text-gray-700">
+                            NEQUI
+                        </div>
+                        <div class="bg-white rounded p-2 flex items-center justify-center text-xs font-bold text-gray-700">
+                            DAVI
+                        </div>
+                        <div class="bg-white rounded p-2 flex items-center justify-center text-xs font-bold text-gray-700">
+                            BANCO
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 Odisea Makeup. Todos los derechos reservados.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-300">Política de Privacidad</a>
+                        <a href="#" class="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-300">Términos de Uso</a>
+                        <a href="#" class="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-300">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="fixed inset-0 z-50 overflow-hidden hidden" id="cart-sidebar">
+        <div class="absolute inset-0 bg-black bg-opacity-50" id="cart-overlay"></div>
+        
+        <div class="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-xl transform translate-x-full transition-transform duration-300" id="cart-panel">
+            <div class="flex flex-col h-full">
+                <!-- Cart Header -->
+                <div class="flex items-center justify-between p-6 border-b border-gray-200">
+                    <h2 class="text-xl font-semibold text-gray-900">Carrito de Compras</h2>
+                    <button class="text-gray-400 hover:text-gray-600 transition-colors duration-300" id="close-cart">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Cart Items -->
+                <div class="flex-1 overflow-y-auto p-6" id="cart-items">
+                    <!-- Empty Cart -->
+                    <div class="text-center py-12" id="empty-cart">
+                        <i class="fas fa-shopping-bag text-6xl text-gray-300 mb-4"></i>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Tu carrito está vacío</h3>
+                        <p class="text-gray-600 mb-6">Agrega algunos productos para comenzar</p>
+                        <button class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300" id="continue-shopping">
+                            Continuar Comprando
+                        </button>
+                    </div>
+                    
+                    <!-- Cart Items List (Hidden by default) -->
+                    <div class="space-y-4 hidden" id="cart-items-list">
+                        <!-- Sample Cart Item -->
+                        <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                            <img src="/placeholder.svg?height=60&width=60" alt="Producto" class="w-15 h-15 object-cover rounded">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-gray-900">Fenty Beauty Foundation</h4>
+                                <p class="text-sm text-gray-600">Tono: 220</p>
+                                <div class="flex items-center justify-between mt-2">
+                                    <div class="flex items-center space-x-2">
+                                        <button class="w-8 h-8 bg-white border border-gray-300 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-300">
+                                            <i class="fas fa-minus text-xs"></i>
+                                        </button>
+                                        <span class="font-semibold">1</span>
+                                        <button class="w-8 h-8 bg-white border border-gray-300 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-300">
+                                            <i class="fas fa-plus text-xs"></i>
+                                        </button>
+                                    </div>
+                                    <span class="font-bold text-primary-500">$89.000</span>
+                                </div>
+                            </div>
+                            <button class="text-gray-400 hover:text-red-500 transition-colors duration-300">
+                                <i class="fas fa-trash text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cart Footer -->
+                <div class="border-t border-gray-200 p-6 space-y-4" id="cart-footer" style="display: none;">
+                    <!-- Coupon Code -->
+                    <div class="flex space-x-2">
+                        <input type="text" placeholder="Código de cupón" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                        <button class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors duration-300">
+                            Aplicar
+                        </button>
+                    </div>
+                    
+                    <!-- Cart Summary -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-600">Subtotal:</span>
+                            <span class="font-semibold">$89.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-600">Envío:</span>
+                            <span class="font-semibold">$15.000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-600">IVA:</span>
+                            <span class="font-semibold">$19.760</span>
+                        </div>
+                        <hr class="my-2">
+                        <div class="flex justify-between text-lg font-bold">
+                            <span>Total:</span>
+                            <span class="text-primary-500">$123.760</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Checkout Button -->
+                    <button class="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        Proceder al Pago
+                    </button>
+                    
+                    <!-- Continue Shopping -->
+                    <button class="w-full border-2 border-primary-500 text-primary-500 py-3 rounded-full font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300" id="continue-shopping-footer">
+                        Continuar Comprando
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <a href="https://wa.me/573001234567?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20productos" 
+           target="_blank" 
+           class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-green-600 hover:shadow-xl transform hover:scale-110 transition-all duration-300 animate-bounce-slow">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="fixed bottom-6 left-6 w-12 h-12 bg-primary-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-600 hover:shadow-xl transform hover:scale-110 transition-all duration-300 opacity-0 invisible" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>

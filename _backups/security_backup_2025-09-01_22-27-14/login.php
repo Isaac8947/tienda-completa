@@ -1,0 +1,198 @@
+<?php
+session_start();
+require_once 'config/config.php';
+require_once 'config/global-settings.php';
+require_once 'models/Customer.php';
+
+// Redirigir si ya está autenticado
+if (isset($_SESSION['user_id'])) {
+    header('Location: mi-cuenta.php');
+    exit;
+}
+
+$error = '';
+$email = '';
+
+// Procesar el formulario de inicio de sesión
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = trim($_POST['email']);
+    $password = $_POST['password'];
+    
+    if (empty($email) || empty($password)) {
+        $error = 'Por favor, completa todos los campos.';
+    } else {
+        $customerModel = new Customer();
+        $customer = $customerModel->getCustomerByEmail($email);
+        
+        if ($customer && password_verify($password, $customer['password'])) {
+            // Iniciar sesión
+            $_SESSION['user_id'] = $customer['id'];
+            $_SESSION['user_name'] = $customer['first_name'];
+            $_SESSION['user_email'] = $customer['email'];
+            
+            // Redirigir a la página anterior o a la cuenta
+            $redirect =  isset($_SESSION['redirect_after_login']) ? $_SESSION['redirect_after_login'] : 'mi-cuenta.php';
+            unset($_SESSION['redirect_after_login']);
+            
+            header("Location: $redirect");
+            exit;
+        } else {
+            $error = 'Email o contraseña incorrectos.';
+        }
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Odisea Makeup</title>
+    <meta name="description" content="Inicia sesión en tu cuenta de Odisea Makeup para acceder a tus pedidos, lista de deseos y más.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="<?php echo ASSETS_URL; ?>/css/style.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">&
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f9a8d4',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            800: '#9d174d',
+                            900: '#831843'
+                        },
+                        secondary: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50">
+    <?php include 'includes/global-header.php'; ?>
+    <?php include 'includes/header.php'; ?>
+
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-md mx-auto">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">Iniciar Sesión</h1>
+                <p class="text-gray-600">Accede a tu cuenta para ver tus pedidos y más</p>
+            </div>
+            
+            <?php if ($error): ?>
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
+                    <?php echo $error; ?>
+                </div>
+            <?php endif; ?>
+            
+            <div class="bg-white rounded-xl shadow-md p-8">
+                <form action="login.php" method="post">
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            value="<?php echo htmlspecialchars($email); ?>"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                            required
+                        >
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                            <a href="recuperar-password.php" class="text-sm text-primary-600 hover:text-primary-500">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                            required
+                        >
+                    </div>
+                    
+                    <div class="flex items-center mb-6">
+                        <input type="checkbox" id="remember" name="remember" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
+                        <label for="remember" class="ml-2 block text-sm text-gray-700">Recordarme</label>
+                    </div>
+                    
+                    <button 
+                        type="submit" 
+                        class="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                    >
+                        Iniciar Sesión
+                    </button>
+                </form>
+                
+                <div class="mt-6">
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-white text-gray-500">O continúa con</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 grid grid-cols-2 gap-3">
+                        <a href="#" class="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                            <i class="fab fa-google text-red-500 mr-2"></i>
+                            Google
+                        </a>
+                        <a href="#" class="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                            <i class="fab fa-facebook text-blue-600 mr-2"></i>
+                            Facebook
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="mt-6 text-center">
+                    <p class="text-sm text-gray-600">
+                        ¿No tienes una cuenta? 
+                        <a href="register.php" class="font-medium text-primary-600 hover:text-primary-500">Regístrate</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <?php include 'includes/global-footer.php'; ?>
+    <?php include 'includes/footer.php'; ?>
+    
+    <script src="<?php echo ASSETS_URL; ?>/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+# Archivos de configuración sensibles
+config/database.php
+config/config.php
+
+# Archivos de sesión y cache
+/cache/*
+!/cache/.htaccess
+/sessions/*
+!/sessions/.htaccess
+
+# Logs
+/logs/*
+!/logs/.htaccess
+/_logs/*
+!/_logs/.htaccess
+
+# Uploads y archivos subidos por usuarios
+/uploads/temp/*
+!/uploads/temp/.htaccess
+/uploads/cache/*
+!/uploads/cache/.htaccess
+
+# Backups (pueden contener información sensible)
+/_backups/*
+!/_backups/README.md
+
+# Archivos del sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (si usas herramientas de build)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de dependencias PHP
+/vendor/
+composer.lock
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+
+# Archivos de prueba
+test*.php
+debug*.php
+_test/
+_debug/
+
+# Variables de entorno
+.env
+.env.local
+.env.production
+
+# Archivos de error de Apache/Nginx
+error_log
+
+# Certificados SSL (si los tienes)
+*.pem
+*.key
+*.crt
+
+# Base de datos
+*.sql
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos grandes que pueden ser regenerados
+/assets/images/cache/*
+/public/storage/

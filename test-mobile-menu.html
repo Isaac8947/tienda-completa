@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Mobile Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        #mobile-menu-toggle {
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: rgba(176, 141, 128, 0.2);
+        }
+        
+        #mobile-menu-toggle:active {
+            transform: scale(0.98);
+        }
+        
+        #mobile-menu {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: top;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+        
+        #mobile-menu:not(.hidden) {
+            max-height: 600px;
+            opacity: 1;
+        }
+        
+        #mobile-menu-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        #mobile-menu-icon.rotate-180 {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="max-w-md mx-auto">
+        <h1 class="text-2xl font-bold mb-6 text-center">Test Mobile Menu</h1>
+        
+        <!-- Mobile Navigation Toggle -->
+        <div class="mb-6">
+            <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="w-full flex items-center justify-between bg-white backdrop-blur-sm border border-gray-200 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-white"></i>
+                    </div>
+                    <div>
+                        <span class="font-semibold text-gray-900">Menú de Cuenta</span>
+                        <div class="text-sm text-gray-500">Toca para navegar</div>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-down transform transition-transform duration-300 text-gray-400" id="mobile-menu-icon"></i>
+            </button>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="hidden mt-4 bg-white backdrop-blur-sm border border-gray-200 rounded-2xl shadow-xl overflow-hidden">
+                <nav class="p-4">
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="#" class="flex flex-col items-center p-4 rounded-xl transition-all duration-300 hover:bg-gray-50">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-2 bg-gray-100">
+                                <i class="fas fa-home text-lg"></i>
+                            </div>
+                            <span class="text-sm font-medium">Dashboard</span>
+                        </a>
+                        <a href="#" class="flex flex-col items-center p-4 rounded-xl transition-all duration-300 hover:bg-gray-50">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-2 bg-gray-100">
+                                <i class="fas fa-shopping-bag text-lg"></i>
+                            </div>
+                            <span class="text-sm font-medium">Pedidos</span>
+                        </a>
+                        <a href="#" class="flex flex-col items-center p-4 rounded-xl transition-all duration-300 hover:bg-gray-50">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-2 bg-gray-100">
+                                <i class="fas fa-heart text-lg"></i>
+                            </div>
+                            <span class="text-sm font-medium">Favoritos</span>
+                        </a>
+                        <a href="#" class="flex flex-col items-center p-4 rounded-xl transition-all duration-300 hover:bg-gray-50">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-2 bg-gray-100">
+                                <i class="fas fa-user-edit text-lg"></i>
+                            </div>
+                            <span class="text-sm font-medium">Perfil</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <p class="text-gray-600 mb-4">Si el menú funciona aquí, también funcionará en mi-cuenta.php</p>
+            <button onclick="testConsole()" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Test Console</button>
+        </div>
+    </div>
+
+    <script>
+        // Simple function to ensure mobile menu works
+        function toggleMobileMenu() {
+            console.log('Toggle function called directly');
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            
+            if (menu && icon) {
+                if (menu.classList.contains('hidden')) {
+                    menu.classList.remove('hidden');
+                    menu.style.display = 'block';
+                    icon.classList.add('rotate-180');
+                    console.log('Menu shown');
+                } else {
+                    menu.classList.add('hidden');
+                    menu.style.display = 'none';
+                    icon.classList.remove('rotate-180');
+                    console.log('Menu hidden');
+                }
+            } else {
+                console.error('Menu elements not found');
+            }
+        }
+        
+        function testConsole() {
+            console.log('Console test - JavaScript is working!');
+            alert('JavaScript is working! Check console for menu logs.');
+        }
+        
+        // Alternative event listener method
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded');
+            const button = document.getElementById('mobile-menu-toggle');
+            if (button) {
+                console.log('Button found, adding event listener');
+                button.addEventListener('click', function(e) {
+                    console.log('Button clicked via event listener');
+                    toggleMobileMenu();
+                });
+            }
+        });
+        
+        // Test JavaScript is working
+        console.log('Test page JavaScript loaded successfully');
+    </script>
+</body>
+</html>

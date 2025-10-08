@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Animación de Header con Scroll</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Custom gradients */
+        .gradient-text {
+            background: linear-gradient(135deg, #ec4899, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Primary colors */
+        :root {
+            --primary-500: #ec4899;
+            --secondary-500: #f472b6;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gradient-to-br from-pink-50 to-purple-50 min-h-screen">
+
+    <!-- Desktop Header -->
+    <header class="hidden md:block fixed top-0 left-0 right-0 z-50 header-scroll-animation header-visible" id="desktop-header">
+        <!-- Top Bar -->
+        <div class="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-2 text-sm">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-6">
+                        <a href="#" class="flex items-center space-x-2 hover:text-pink-200 transition-colors">
+                            <i class="fas fa-phone text-xs"></i>
+                            <span>+57 300 123 4567</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-2 hover:text-pink-200 transition-colors">
+                            <i class="fas fa-envelope text-xs"></i>
+                            <span>info@odisea.com</span>
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-xs">Síguenos:</span>
+                        <a href="#" class="hover:text-pink-200 transition-colors transform hover:scale-110">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="hover:text-pink-200 transition-colors transform hover:scale-110">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="glass-effect backdrop-blur-md">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <a href="#" class="text-3xl font-serif font-bold gradient-text">
+                            Odisea
+                        </a>
+                        <span class="ml-2 text-xs text-gray-500 font-light">DEMO</span>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="flex flex-1 max-w-xl mx-8 relative">
+                        <input type="text" 
+                               placeholder="Buscar productos, marcas..."
+                               class="w-full px-6 py-4 pr-14 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-pink-500 transition-all duration-300 text-gray-700 placeholder-gray-400">
+                        <button class="absolute right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center text-white hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-search text-sm"></i>
+                        </button>
+                    </div>
+
+                    <!-- Header Actions -->
+                    <div class="flex items-center space-x-6">
+                        <button class="flex items-center space-x-2 text-gray-700 hover:text-pink-500 transition-colors p-2 rounded-xl hover:bg-pink-50">
+                            <div class="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white text-sm">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="font-medium">Mi Cuenta</span>
+                        </button>
+
+                        <button class="relative p-2 text-gray-700 hover:text-pink-500 transition-colors rounded-xl hover:bg-pink-50">
+                            <i class="fas fa-heart text-xl"></i>
+                            <span class="absolute -top-1 -right-1 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium shadow-lg">3</span>
+                        </button>
+
+                        <button class="relative p-2 text-gray-700 hover:text-pink-500 transition-colors rounded-xl hover:bg-pink-50">
+                            <i class="fas fa-shopping-bag text-xl"></i>
+                            <span class="absolute -top-1 -right-1 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium shadow-lg">2</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="bg-white/90 backdrop-blur-md border-t border-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-center space-x-8 py-4">
+                    <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-pink-500 transition-colors font-medium">
+                        <i class="fas fa-th-large"></i>
+                        <span>Categorías</span>
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-pink-500 transition-colors font-medium">Productos</a>
+                    <a href="#" class="text-gray-700 hover:text-pink-500 transition-colors font-medium">Ofertas</a>
+                    <a href="#" class="text-gray-700 hover:text-pink-500 transition-colors font-medium">Marcas</a>
+                    <a href="#" class="text-gray-700 hover:text-pink-500 transition-colors font-medium">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Header -->
+    <header class="md:hidden fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg mobile-header-scroll-animation header-visible" id="mobile-header">
+        <div class="px-4 py-3">
+            <div class="flex items-center justify-between">
+                <button class="p-2 text-gray-700 hover:text-pink-500 transition-colors rounded-xl hover:bg-pink-50">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-serif font-bold gradient-text">
+                        Odisea
+                    </a>
+                    <span class="ml-1 text-xs text-gray-500 font-light">DEMO</span>
+                </div>
+
+                <div class="flex items-center space-x-2">
+                    <button class="p-2 text-gray-700 hover:text-pink-500 transition-colors rounded-xl hover:bg-pink-50">
+                        <i class="fas fa-search text-lg"></i>
+                    </button>
+                    <button class="relative p-2 text-gray-700 hover:text-pink-500 transition-colors rounded-xl hover:bg-pink-50">
+                        <i class="fas fa-shopping-bag text-lg"></i>
+                        <span class="absolute -top-1 -right-1 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center font-medium shadow-lg">2</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content with padding to account for fixed header -->
+    <div class="pt-32 md:pt-40">
+        <!-- Hero Section -->
+        <div class="container mx-auto px-4 py-20">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold gradient-text mb-6">
+                    Demo de Animación de Header
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Desplázate hacia abajo para ver cómo el header se oculta elegantemente y hacia arriba para verlo aparecer con una animación suave.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-2xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                        Comenzar Demo
+                    </button>
+                    <button class="px-8 py-4 border-2 border-pink-500 text-pink-500 rounded-2xl font-semibold hover:bg-pink-50 transition-all duration-300">
+                        Ver Más
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Sections to demonstrate scroll -->
+        <div class="space-y-20">
+            <div class="container mx-auto px-4">
+                <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Características de la Animación</h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center p-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-arrow-up text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Scroll Arriba</h3>
+                            <p class="text-gray-600">El header aparece suavemente cuando haces scroll hacia arriba</p>
+                        </div>
+                        <div class="text-center p-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-arrow-down text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Scroll Abajo</h3>
+                            <p class="text-gray-600">Se oculta elegantemente cuando haces scroll hacia abajo</p>
+                        </div>
+                        <div class="text-center p-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-magic text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Animación Fluida</h3>
+                            <p class="text-gray-600">Transiciones suaves con efectos de blur y sombra</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More content sections -->
+            <div class="container mx-auto px-4">
+                <div class="bg-gradient-to-r from-pink-100 to-purple-100 rounded-3xl p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Sigue haciendo scroll</h2>
+                    <p class="text-lg text-gray-700 mb-8">
+                        Esta es una demostración de cómo funciona la animación del header. Mientras más contenido tengas en tu página, 
+                        más útil se vuelve esta característica para mejorar la experiencia del usuario.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Ventajas:</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Más espacio para contenido</li>
+                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>UX moderna y elegante</li>
+                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Navegación intuitiva</li>
+                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Rendimiento optimizado</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Características técnicas:</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><i class="fas fa-cog text-blue-500 mr-2"></i>RequestAnimationFrame para rendimiento</li>
+                                <li class="flex items-center"><i class="fas fa-cog text-blue-500 mr-2"></i>Transiciones CSS optimizadas</li>
+                                <li class="flex items-center"><i class="fas fa-cog text-blue-500 mr-2"></i>Responsive para móvil y desktop</li>
+                                <li class="flex items-center"><i class="fas fa-cog text-blue-500 mr-2"></i>Respeta prefer-reduced-motion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More sections to provide scroll content -->
+            <div class="container mx-auto px-4">
+                <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Configuración Automática</h2>
+                    <p class="text-lg text-gray-700 mb-8">
+                        La animación se activa automáticamente en todas las páginas que incluyan el componente. 
+                        No necesitas configuración adicional.
+                    </p>
+                    <div class="bg-gray-100 rounded-xl p-6">
+                        <code class="text-sm text-gray-800">
+                            &lt;?php include 'includes/header-scroll-animation.php'; ?&gt;
+                        </code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final section -->
+            <div class="container mx-auto px-4 pb-20">
+                <div class="bg-gradient-to-r from-pink-500 to-purple-500 rounded-3xl p-8 md:p-12 text-white text-center">
+                    <h2 class="text-3xl font-bold mb-6">¡Prueba la animación!</h2>
+                    <p class="text-xl mb-8">
+                        Haz scroll hacia arriba y abajo para ver el header en acción
+                    </p>
+                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="px-8 py-4 bg-white text-pink-500 rounded-2xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                        Volver al inicio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php include 'includes/header-scroll-animation.php'; ?>
+</body>
+</html>

@@ -1,0 +1,387 @@
+/* Paleta elegante y sofisticada para mujeres - Inspirada en maquillaje luxury */
+
+/* Primary colors - Nude Rosado Elegante */
+.bg-primary-50 { background-color: #faf7f5 !important; } /* Powder base */
+.bg-primary-100 { background-color: #f5ede8 !important; } /* Light nude */
+.bg-primary-200 { background-color: #ead5cc !important; } /* Warm nude */
+.bg-primary-300 { background-color: #ddbdab !important; } /* Medium nude */
+.bg-primary-400 { background-color: #c9a196 !important; } /* Rose nude */
+.bg-primary-500 { background-color: #b08d80 !important; } /* Mauve elegante */
+.bg-primary-600 { background-color: #9d7a6b !important; } /* Deep mauve */
+.bg-primary-700 { background-color: #8a6657 !important; } /* Rich nude */
+
+.text-primary-50 { color: #faf7f5 !important; }
+.text-primary-100 { color: #f5ede8 !important; }
+.text-primary-200 { color: #ead5cc !important; }
+.text-primary-300 { color: #ddbdab !important; }
+.text-primary-400 { color: #c9a196 !important; }
+.text-primary-500 { color: #b08d80 !important; }
+.text-primary-600 { color: #9d7a6b !important; }
+
+/* Secondary colors - Beige Dorado Sutil */
+.bg-secondary-50 { background-color: #fdfcfa !important; } /* Champagne base */
+.bg-secondary-100 { background-color: #faf6f0 !important; } /* Pearl */
+.bg-secondary-200 { background-color: #f4e9d9 !important; } /* Light gold */
+.bg-secondary-300 { background-color: #ead5b8 !important; } /* Warm beige */
+.bg-secondary-400 { background-color: #d4b896 !important; } /* Golden beige */
+.bg-secondary-500 { background-color: #c4a575 !important; } /* Soft gold */
+.bg-secondary-600 { background-color: #b39256 !important; } /* Rich gold */
+.bg-secondary-700 { background-color: #9e7d3a !important; } /* Deep gold */
+
+.text-secondary-50 { color: #fdfcfa !important; }
+.text-secondary-100 { color: #faf6f0 !important; }
+.text-secondary-200 { color: #f4e9d9 !important; }
+.text-secondary-300 { color: #ead5b8 !important; }
+.text-secondary-400 { color: #d4b896 !important; }
+.text-secondary-500 { color: #c4a575 !important; }
+.text-secondary-600 { color: #b39256 !important; }
+
+/* Accent colors - Malva Sofisticado */
+.bg-accent-50 { background-color: #fbf9f7 !important; } /* Soft cream */
+.bg-accent-100 { background-color: #f6f0ed !important; } /* Blush cream */
+.bg-accent-200 { background-color: #e8d5d0 !important; } /* Light mauve */
+.bg-accent-300 { background-color: #d4b5ae !important; } /* Soft mauve */
+.bg-accent-400 { background-color: #c19590 !important; } /* Medium mauve */
+.bg-accent-500 { background-color: #a67c76 !important; } /* Deep mauve */
+.bg-accent-600 { background-color: #8d635d !important; } /* Rich mauve */
+
+.text-accent-50 { color: #fbf9f7 !important; }
+.text-accent-100 { color: #f6f0ed !important; }
+.text-accent-200 { color: #e8d5d0 !important; }
+.text-accent-300 { color: #d4b5ae !important; }
+.text-accent-400 { color: #c19590 !important; }
+.text-accent-500 { color: #a67c76 !important; }
+
+/* Gradientes elegantes y sofisticados */
+.bg-gradient-to-r.from-primary-500.to-secondary-500 {
+  background: linear-gradient(to right, #b08d80, #c4a575) !important;
+}
+
+.bg-gradient-to-r.from-primary-600.to-secondary-600 {
+  background: linear-gradient(to right, #9d7a6b, #b39256) !important;
+}
+
+.bg-gradient-to-r.from-primary-400.to-secondary-400 {
+  background: linear-gradient(to right, #c9a196, #d4b896) !important;
+}
+
+/* Gradientes de fondo súper elegantes */
+.bg-gradient-to-br.from-primary-50.via-white.to-secondary-50 {
+  background: linear-gradient(135deg, #faf7f5 0%, #ffffff 50%, #fdfcfa 100%) !important;
+}
+
+.bg-gradient-to-br.from-primary-50.to-secondary-50 {
+  background: linear-gradient(135deg, #faf7f5 0%, #fdfcfa 100%) !important;
+}
+
+.bg-gradient-to-br.from-primary-400.to-secondary-400 {
+  background: linear-gradient(135deg, #c9a196, #d4b896) !important;
+}
+
+.bg-gradient-to-br.from-accent-400.to-primary-400 {
+  background: linear-gradient(135deg, #c19590, #c9a196) !important;
+}
+
+/* Gradientes especiales luxury */
+.bg-gradient-luxury-nude {
+  background: linear-gradient(135deg, #faf7f5 0%, #f5ede8 25%, #fdfcfa 50%, #f4e9d9 75%, #fbf9f7 100%) !important;
+}
+
+.bg-gradient-luxury-mauve {
+  background: linear-gradient(135deg, #b08d80 0%, #c4a575 50%, #a67c76 100%) !important;
+}
+
+.bg-gradient-luxury-soft {
+  background: linear-gradient(45deg, #faf7f5 0%, #fdfcfa 20%, #f5ede8 40%, #f6f0ed 60%, #f4e9d9 80%, #fbf9f7 100%) !important;
+}
+
+/* Gradiente para top bar elegante */
+.bg-gradient-to-r.from-primary-500.to-secondary-500.text-white {
+  background: linear-gradient(to right, #b08d80, #c4a575) !important;
+  color: white !important;
+}
+
+/* Text gradients sofisticados */
+.bg-gradient-to-r.from-primary-500.to-secondary-500.bg-clip-text.text-transparent {
+  background: linear-gradient(to right, #b08d80, #c4a575) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+.bg-gradient-to-r.from-primary-600.to-secondary-600.bg-clip-text.text-transparent {
+  background: linear-gradient(to right, #9d7a6b, #b39256) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+.bg-gradient-to-r.from-primary-400.to-secondary-400.bg-clip-text.text-transparent {
+  background: linear-gradient(to right, #c9a196, #d4b896) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Botones elegantes y sofisticados */
+.btn-primary,
+.bg-gradient-to-r.from-primary-500.to-secondary-500.text-white {
+  background: linear-gradient(135deg, #b08d80, #c4a575) !important;
+  color: white !important;
+  padding: 14px 28px !important;
+  border-radius: 30px !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.3px !important;
+  transition: all 0.4s ease !important;
+  box-shadow: 0 8px 25px rgba(176, 141, 128, 0.2) !important;
+  border: none !important;
+}
+
+.btn-primary:hover,
+.bg-gradient-to-r.from-primary-500.to-secondary-500.text-white:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 35px rgba(176, 141, 128, 0.3) !important;
+  background: linear-gradient(135deg, #9d7a6b, #b39256) !important;
+}
+
+/* Botón secundario elegante */
+.btn-secondary {
+  background: rgba(176, 141, 128, 0.08) !important;
+  color: #9d7a6b !important;
+  border: 2px solid rgba(176, 141, 128, 0.3) !important;
+  padding: 12px 26px !important;
+  border-radius: 30px !important;
+  font-weight: 500 !important;
+  transition: all 0.4s ease !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #b08d80, #c4a575) !important;
+  color: white !important;
+  border-color: transparent !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(176, 141, 128, 0.25) !important;
+}
+
+/* Section backgrounds luxury */
+section.bg-gradient-to-r.from-primary-500.to-secondary-500 {
+  background: linear-gradient(135deg, #b08d80, #c4a575) !important;
+}
+
+/* Hero section con fondo luxury nude */
+.hero-gradient {
+  background: linear-gradient(135deg, #faf7f5 0%, #fdfcfa 50%, #f5ede8 100%) !important;
+}
+
+/* Product cards con diseño sofisticado */
+.product-card-shadow {
+  box-shadow: 0 8px 30px rgba(176, 141, 128, 0.08) !important;
+  transition: all 0.4s ease !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(176, 141, 128, 0.1) !important;
+}
+
+.product-card-shadow:hover {
+  box-shadow: 0 15px 45px rgba(176, 141, 128, 0.15) !important;
+  transform: translateY(-8px) !important;
+  border-color: rgba(176, 141, 128, 0.2) !important;
+}
+
+/* Badges luxury */
+.badge-new {
+  background: linear-gradient(135deg, #a67c76, #b08d80) !important;
+  color: white !important;
+  padding: 8px 16px !important;
+  border-radius: 25px !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  box-shadow: 0 4px 15px rgba(166, 124, 118, 0.3) !important;
+}
+
+.badge-sale {
+  background: linear-gradient(135deg, #c19590, #d4b5ae) !important;
+  color: white !important;
+  padding: 8px 16px !important;
+  border-radius: 25px !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  box-shadow: 0 4px 15px rgba(193, 149, 144, 0.3) !important;
+}
+
+/* Cards con efecto glassmorphism luxury */
+.card-glass {
+  background: rgba(250, 247, 245, 0.9) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(176, 141, 128, 0.15) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 8px 32px rgba(176, 141, 128, 0.08) !important;
+}
+
+/* Header elegante */
+.header-elegant {
+  backdrop-filter: blur(20px) !important;
+  background: rgba(250, 247, 245, 0.95) !important;
+  border-bottom: 1px solid rgba(176, 141, 128, 0.1) !important;
+  box-shadow: 0 4px 20px rgba(176, 141, 128, 0.05) !important;
+}
+
+/* Inputs sofisticados */
+.input-elegant {
+  background: rgba(250, 247, 245, 0.6) !important;
+  border: 2px solid rgba(176, 141, 128, 0.2) !important;
+  border-radius: 20px !important;
+  padding: 14px 20px !important;
+  transition: all 0.3s ease !important;
+  font-size: 0.95rem !important;
+}
+
+.input-elegant:focus {
+  border-color: #b08d80 !important;
+  background: rgba(250, 247, 245, 0.9) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 4px rgba(176, 141, 128, 0.1) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Animaciones suaves y elegantes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes shimmer {
+  0% { 
+    background-position: -200px 0; 
+    transform: translateX(-100%);
+  }
+  100% { 
+    background-position: calc(200px + 100%) 0; 
+    transform: translateX(100%);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(176, 141, 128, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(176, 141, 128, 0.4);
+  }
+}
+
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(196, 165, 117, 0.3), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Text colors suaves */
+.text-makeup-primary { color: #e879f9 !important; }
+.text-makeup-secondary { color: #fbbf24 !important; }
+.text-makeup-accent { color: #d946ef !important; }
+.text-makeup-soft { color: #f472b6 !important; }
+
+/* Backgrounds suaves */
+.bg-makeup-light { background-color: #fdf2f8 !important; }
+.bg-makeup-cream { background-color: #fff7ed !important; }
+.bg-makeup-blush { background-color: #fce7f3 !important; }
+
+/* Header con estilo más suave */
+.header-elegant {
+  backdrop-filter: blur(10px) !important;
+  background: rgba(253, 242, 248, 0.95) !important;
+  border-bottom: 1px solid rgba(232, 121, 249, 0.1) !important;
+}
+
+/* Cards con efecto glassmorphism */
+.card-glass {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(232, 121, 249, 0.1) !important;
+  border-radius: 20px !important;
+}
+
+/* Inputs elegantes */
+.input-elegant {
+  background: rgba(253, 242, 248, 0.5) !important;
+  border: 2px solid rgba(232, 121, 249, 0.2) !important;
+  border-radius: 15px !important;
+  padding: 12px 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+.input-elegant:focus {
+  border-color: #e879f9 !important;
+  background: rgba(253, 242, 248, 0.8) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(232, 121, 249, 0.1) !important;
+}
+
+/* Asegurar que los botones con estas clases tengan los colores correctos */
+button.bg-gradient-to-r.from-primary-500.to-secondary-500,
+a.bg-gradient-to-r.from-primary-500.to-secondary-500 {
+  background: linear-gradient(135deg, #e879f9, #fbbf24) !important;
+  color: white !important;
+}
+
+/* Para el top bar del header */
+div.bg-gradient-to-r.from-primary-500.to-secondary-500.text-white {
+  background: linear-gradient(135deg, #e879f9, #fbbf24) !important;
+  color: white !important;
+}
+
+/* Efectos hover suaves */
+.hover-lift:hover {
+  transform: translateY(-3px) !important;
+  transition: transform 0.3s ease !important;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(232, 121, 249, 0.3) !important;
+  transition: box-shadow 0.3s ease !important;
+}

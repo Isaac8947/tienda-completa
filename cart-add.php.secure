@@ -1,0 +1,115 @@
+<?php
+require_once 'includes/security-headers.php';
+require_once 'includes/InputSanitizer.php';
+require_once 'includes/RateLimiter.php';
+require_once 'includes/CSRFProtection.php';
+
+// Check rate limiting
+if (!RateLimiter::checkLimit('cart', 20, 300)) {
+    http_response_code(429);
+    echo json_encode(['success' => false, 'error' => 'Too many requests']);
+    exit;
+}
+
+// Validate CSRF token
+if (!isset(InputSanitizer::sanitizeString($_POST['csrf_token']) || !CSRFProtection::validateToken(InputSanitizer::sanitizeString($_POST['csrf_token'], 'cart')) {
+    http_response_code(403);
+    echo json_encode(['success' => false, 'error' => 'Invalid request']);
+    exit;
+}
+// Configuración de sesión segura (debe ir antes de session_start)
+ini_set('session.cookie_httponly', 1);
+ini_set('session.use_only_cookies', 1);
+ini_set('session.cookie_secure', 0); // Cambiar a 1 en HTTPS
+ini_set('session.cookie_samesite', 'Strict');
+
+session_start();
+require_once 'config/database.php';
+require_once 'models/Product.php';
+
+header('Content-Type: application/json');
+
+// Verificar si se recibieron los datos necesarios
+if (!isset(InputSanitizer::sanitizeString($_POST['product_id']) && !isset(InputSanitizer::sanitizeString($_POST['id'])) {
+    echo json_encode([
+        'success' => false,
+        'message' => 'Faltan parámetros requeridos'
+    ]);
+    exit;
+}
+
+$productId = (int)(InputSanitizer::sanitizeString($_POST['product_id'] ?? InputSanitizer::sanitizeString($_POST['id']);
+$quantity = InputSanitizer::sanitizeString($_POST['quantity'] ?? 1;
+$quantity = is_numeric($quantity) ? (int)$quantity : 1;
+
+// Validar cantidad
+if ($quantity <= 0) {
+    echo json_encode([
+        'success' => false,
+        'message' => 'La cantidad debe ser mayor que cero'
+    ]);
+    exit;
+}
+
+// Obtener información del producto
+$productModel = new Product();
+$product = $productModel->getProductById($productId);
+
+if (!$product) {
+    echo json_encode([
+        'success' => false,
+        'message' => 'Producto no encontrado'
+    ]);
+    exit;
+}
+
+// Verificar stock
+$stock = $product['stock'] ?? $product['inventory_quantity'] ?? 0;
+if ($stock < $quantity) {
+    echo json_encode([
+        'success' => false,
+        'message' => 'No hay suficiente stock disponible'
+    ]);
+    exit;
+}
+
+// Inicializar el carrito si no existe
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
+}
+
+// Verificar si el producto ya está en el carrito
+$found = false;
+foreach ($_SESSION['cart'] as &$item) {
+    if ($item['id'] == $productId) {
+        // Actualizar cantidad
+        $item['quantity'] += $quantity;
+        $found = true;
+        break;
+    }
+}
+
+// Si no se encontró, agregar al carrito
+if (!$found) {
+    $_SESSION['cart'][] = [
+        'id' => $productId,
+        'name' => $product['name'],
+        'price' => $product['price'],
+        'quantity' => $quantity,
+        'image' => $product['main_image'] ?? $product['image'] ?? null,
+        'variant' => isset(InputSanitizer::sanitizeString($_POST['variant']) ? InputSanitizer::sanitizeString($_POST['variant'] : null
+    ];
+}
+
+// Calcular el total de productos en el carrito
+$cartCount = 0;
+foreach ($_SESSION['cart'] as $item) {
+    $cartCount += $item['quantity'];
+}
+
+echo json_encode([
+    'success' => true,
+    'message' => 'Producto agregado al carrito',
+    'cartCount' => $cartCount
+]);
+exit;

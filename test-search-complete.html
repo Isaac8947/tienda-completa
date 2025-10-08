@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Search with Images</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .search-container { margin-bottom: 20px; }
+        .search-input { padding: 10px; width: 300px; font-size: 16px; }
+        .search-results { border: 1px solid #ddd; border-radius: 8px; max-height: 400px; overflow-y: auto; }
+        .product-item { display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #eee; }
+        .product-item:hover { background-color: #f5f5f5; }
+        .product-image { width: 50px; height: 50px; object-fit: cover; border-radius: 4px; margin-right: 10px; border: 1px solid #ddd; }
+        .product-info h4 { margin: 0; font-size: 14px; }
+        .product-info p { margin: 0; font-size: 12px; color: #666; }
+        .product-price { color: #e74c3c; font-weight: bold; }
+        .no-results { padding: 20px; text-align: center; color: #666; }
+        .loading { padding: 20px; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Test Search with Images</h1>
+    
+    <div class="search-container">
+        <input type="text" class="search-input" id="search-input" placeholder="Buscar productos (ej: samsung, macbook, airpods...)">
+    </div>
+    
+    <div class="search-results" id="search-results" style="display: none;">
+        <!-- Results will appear here -->
+    </div>
+    
+    <div id="debug-info" style="margin-top: 20px; padding: 10px; background: #f9f9f9; border-radius: 4px; display: none;">
+        <h3>Debug Info:</h3>
+        <pre id="debug-content"></pre>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+        const debugInfo = document.getElementById('debug-info');
+        const debugContent = document.getElementById('debug-content');
+        
+        let searchTimeout;
+        
+        searchInput.addEventListener('input', function() {
+            clearTimeout(searchTimeout);
+            const query = this.value.trim();
+            
+            if (query.length < 2) {
+                searchResults.style.display = 'none';
+                debugInfo.style.display = 'none';
+                return;
+            }
+            
+            searchTimeout = setTimeout(() => {
+                performSearch(query);
+            }, 300);
+        });
+        
+        function performSearch(query) {
+            // Show loading
+            searchResults.innerHTML = '<div class="loading">Buscando...</div>';
+            searchResults.style.display = 'block';
+            
+            fetch(`api/search.php?q=${encodeURIComponent(query)}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Search API Response:', data);
+                    debugContent.textContent = JSON.stringify(data, null, 2);
+                    debugInfo.style.display = 'block';
+                    
+                    displayResults(data);
+                })
+                .catch(error => {
+                    console.error('Search error:', error);
+                    searchResults.innerHTML = '<div class="no-results">Error al realizar la búsqueda</div>';
+                });
+        }
+        
+        function displayResults(data) {
+            if (!data.products || data.products.length === 0) {
+                searchResults.innerHTML = '<div class="no-results">No se encontraron productos</div>';
+                return;
+            }
+            
+            let html = '';
+            data.products.forEach(product => {
+                const price = product.sale_price && product.sale_price < product.price ? product.sale_price : product.price;
+                const originalPrice = product.sale_price && product.sale_price < product.price ? product.price : null;
+                
+                html += `
+                    <div class="product-item">
+                        <img src="${product.image || 'assets/images/placeholder.svg'}" 
+                             alt="${product.name}" 
+                             class="product-image"
+                             onerror="this.src='assets/images/placeholder.svg'">
+                        <div class="product-info">
+                            <h4>${product.name}</h4>
+                            <p>${product.brand_name || ''} ${product.brand_name && product.category_name ? '•' : ''} ${product.category_name || ''}</p>
+                            <div class="product-price">
+                                $${Number(price).toLocaleString()}
+                                ${originalPrice ? `<span style="text-decoration: line-through; color: #999; margin-left: 5px;">$${Number(originalPrice).toLocaleString()}</span>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            searchResults.innerHTML = html;
+        }
+    </script>
+</body>
+</html>

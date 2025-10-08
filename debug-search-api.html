@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Search API</title>
+</head>
+<body>
+    <h1>Debug Search API</h1>
+    <input type="text" id="search-input" placeholder="Escribe para buscar..." style="padding: 10px; width: 300px;">
+    <div id="results" style="margin-top: 20px; border: 1px solid #ccc; padding: 10px;"></div>
+
+    <script>
+        const searchInput = document.getElementById('search-input');
+        const resultsDiv = document.getElementById('results');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.trim();
+            if (query.length < 2) {
+                resultsDiv.innerHTML = '';
+                return;
+            }
+
+            fetch(`api/search.php?q=${encodeURIComponent(query)}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Search results:', data);
+                    
+                    let html = '<h3>Raw API Response:</h3><pre>' + JSON.stringify(data, null, 2) + '</pre>';
+                    
+                    if (data.products && data.products.length > 0) {
+                        html += '<h3>Products:</h3>';
+                        data.products.forEach(product => {
+                            html += `
+                                <div style="border: 1px solid #eee; margin: 10px 0; padding: 10px;">
+                                    <strong>Name:</strong> ${product.name}<br>
+                                    <strong>Image field:</strong> ${product.image || 'NULL'}<br>
+                                    <strong>Price:</strong> $${product.price}<br>
+                                    ${product.image ? `<img src="${product.image}" alt="${product.name}" style="width: 50px; height: 50px; object-fit: cover;">` : 'No image'}
+                                </div>
+                            `;
+                        });
+                    }
+                    
+                    resultsDiv.innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Search error:', error);
+                    resultsDiv.innerHTML = '<strong>Error:</strong> ' + error.message;
+                });
+        });
+    </script>
+</body>
+</html>

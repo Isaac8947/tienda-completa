@@ -1,0 +1,96 @@
+[09-Sep-2025 03:10:43 Europe/Berlin] Iniciando procesamiento de pedido - IP: ::1
+[09-Sep-2025 03:10:43 Europe/Berlin] Carrito encontrado: [{"id":9,"name":"Magcubic HY300 Pro Mini Projector","price":"120000.00","compare_price":"129000.00","discount_percentage":7,"is_on_sale":false,"quantity":1,"image":"uploads\/products\/68b75a0011464_1756846592.webp","variant":null}]
+[09-Sep-2025 03:10:43 Europe/Berlin] Conexión a BD exitosa
+[09-Sep-2025 03:10:43 Europe/Berlin] Validando stock para: [{"product_id":9,"quantity":1}]
+[09-Sep-2025 03:10:43 Europe/Berlin] Transacción iniciada correctamente
+[09-Sep-2025 03:10:43 Europe/Berlin] Error en recordMovement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[09-Sep-2025 03:10:43 Europe/Berlin] Error registrando movimiento de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[09-Sep-2025 03:10:43 Europe/Berlin] Transacción confirmada exitosamente, orden creada con ID: 7
+[09-Sep-2025 03:10:43 Europe/Berlin] Pedido creado exitosamente con ID: 7
+[09-Sep-2025 03:10:52 Europe/Berlin] Iniciando procesamiento de pedido - IP: ::1
+[09-Sep-2025 03:10:52 Europe/Berlin] Carrito encontrado: []
+[09-Sep-2025 03:10:52 Europe/Berlin] Error procesando pedido: El carrito está vacío - Trace: #0 {main}
+[09-Sep-2025 03:12:16 Europe/Berlin] Iniciando procesamiento de pedido - IP: ::1
+[09-Sep-2025 03:12:16 Europe/Berlin] Carrito encontrado: [{"id":10,"name":"Proyector Port\u00e1til HY320","price":"400000.00","quantity":1,"image":"uploads\/products\/68b75e0006e6d_1756847616.webp"}]
+[09-Sep-2025 03:12:16 Europe/Berlin] Conexión a BD exitosa
+[09-Sep-2025 03:12:16 Europe/Berlin] Validando stock para: [{"product_id":10,"quantity":1}]
+[09-Sep-2025 03:12:16 Europe/Berlin] Transacción iniciada correctamente
+[09-Sep-2025 03:12:16 Europe/Berlin] Error en recordMovement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[09-Sep-2025 03:12:16 Europe/Berlin] Error registrando movimiento de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[09-Sep-2025 03:12:16 Europe/Berlin] Transacción confirmada exitosamente, orden creada con ID: 8
+[09-Sep-2025 03:12:16 Europe/Berlin] Pedido creado exitosamente con ID: 8
+[09-Sep-2025 03:33:18 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp\htdocs\odisea-makeup-store\procesar-pedido.php on line 12
+[09-Sep-2025 03:33:18 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp\htdocs\odisea-makeup-store\procesar-pedido.php on line 13
+[09-Sep-2025 03:33:18 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp\htdocs\odisea-makeup-store\procesar-pedido.php on line 14
+[09-Sep-2025 03:33:18 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp\htdocs\odisea-makeup-store\procesar-pedido.php on line 15
+[09-Sep-2025 03:33:18 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\odisea-makeup-store\procesar-pedido.php on line 17
+[09-Sep-2025 03:33:18 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\odisea-makeup-store\test-whatsapp-config.php:7) in C:\xampp\htdocs\odisea-makeup-store\procesar-pedido.php on line 25
+[09-Sep-2025 03:33:18 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\odisea-makeup-store\test-whatsapp-config.php:7) in C:\xampp\htdocs\odisea-makeup-store\procesar-pedido.php on line 26
+[09-Sep-2025 03:33:18 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\odisea-makeup-store\test-whatsapp-config.php:7) in C:\xampp\htdocs\odisea-makeup-store\procesar-pedido.php on line 27
+[09-Sep-2025 03:33:18 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\odisea-makeup-store\test-whatsapp-config.php:7) in C:\xampp\htdocs\odisea-makeup-store\procesar-pedido.php on line 28
+[09-Sep-2025 03:33:18 Europe/Berlin] PHP Warning:  Undefined array key "REQUEST_METHOD" in C:\xampp\htdocs\odisea-makeup-store\procesar-pedido.php on line 31
+[09-Sep-2025 03:33:18 Europe/Berlin] PHP Warning:  Undefined array key "REQUEST_METHOD" in C:\xampp\htdocs\odisea-makeup-store\procesar-pedido.php on line 32
+[09-Sep-2025 03:33:18 Europe/Berlin] Error: Método no POST recibido: 
+[09-Sep-2025 04:12:25 Europe/Berlin] Iniciando procesamiento de pedido - IP: 192.168.0.65
+[09-Sep-2025 04:12:25 Europe/Berlin] Carrito encontrado: [{"id":7,"name":"eiggis","price":"150000.00","compare_price":"200000.00","discount_percentage":25,"is_on_sale":true,"quantity":1,"image":"uploads\/products\/68b5e1a30557e_1756750243.png","variant":null}]
+[09-Sep-2025 04:12:25 Europe/Berlin] Configuraciones WhatsApp obtenidas: {"whatsapp_number":"3008061655","store_name":"Odisea Makeup","tax_rate":"19","shipping_cost":"15000","shipping_free_threshold":50000,"whatsapp_message_template":"\ud83d\udecd\ufe0f *NUEVO PEDIDO - {STORE_NAME}*\r\n\r\n\ud83d\udccb *N\u00famero de Pedido:* #{ORDER_NUMBER}\r\n\ud83d\udcc5 *Fecha:* {DATE}\r\n\r\n\ud83d\udc64 *DATOS DEL CLIENTE*\r\n\u2022 *Nombre:* {CUSTOMER_NAME}\r\n\u2022 *Tel\u00e9fono:* {CUSTOMER_PHONE}\r\n\u2022 *Email:* {CUSTOMER_EMAIL}\r\n\u2022 *C\u00e9dula:* {CUSTOMER_CEDULA}\r\n\r\n\ud83d\udccd *DIRECCI\u00d3N DE ENV\u00cdO*\r\n\u2022 *Departamento:* {SHIPPING_DEPARTMENT}\r\n\u2022 *Ciudad:* {SHIPPING_CITY}\r\n\u2022 *Direcci\u00f3n:* {SHIPPING_ADDRESS}\r\n\r\n\ud83d\uded2 *PRODUCTOS PEDIDOS*\r\n{PRODUCTS_LIST}\r\n\r\n\ud83d\udcb0 *RESUMEN DE COSTOS*\r\n\u2022 Subtotal: ${SUBTOTAL}\r\n\u2022 IVA ({TAX_RATE}%): ${TAX}\r\n\u2022 Env\u00edo: {SHIPPING}\r\n\u2022 *TOTAL: ${TOTAL}*\r\n\r\n\ud83d\udcb3 *M\u00c9TODO DE PAGO*\r\nPago contra entrega \ud83d\ude9a\r\n(Efectivo o transferencia al recibir)\r\n\r\n{NOTES}\u2705 *\u00a1Hola! Este es mi pedido desde la p\u00e1gina web.*\r\n\u00bfPodr\u00edas confirmarme la disponibilidad y tiempo de entrega?\r\n\r\n\u00a1Gracias! \ud83d\ude0a"}
+[09-Sep-2025 04:12:25 Europe/Berlin] Conexión a BD exitosa
+[09-Sep-2025 04:12:25 Europe/Berlin] Validando stock para: [{"product_id":7,"quantity":1}]
+[09-Sep-2025 04:12:25 Europe/Berlin] Transacción iniciada correctamente
+[09-Sep-2025 04:12:25 Europe/Berlin] Error en recordMovement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[09-Sep-2025 04:12:25 Europe/Berlin] Error registrando movimiento de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[09-Sep-2025 04:12:25 Europe/Berlin] Transacción confirmada exitosamente, orden creada con ID: 9
+[09-Sep-2025 04:12:25 Europe/Berlin] Mensaje WhatsApp generado (primeros 200 chars): 🛍️ *NUEVO PEDIDO - Odisea Makeup*
+
+📋 *Número de Pedido:* #000009
+📅 *Fecha:* 09/09/2025 04:12
+
+👤 *DATOS DEL CLIENTE*
+• *Nombre:* Isacac Camilo
+• *Teléfono:* 3008061655
+• *
+[09-Sep-2025 04:12:25 Europe/Berlin] Número WhatsApp a usar: 3008061655
+[09-Sep-2025 04:12:25 Europe/Berlin] URL WhatsApp generada: https://wa.me/3008061655?text=%F0%9F%9B%8D%EF%B8%8F+%2ANUEVO+PEDIDO+-+Odisea+Makeup%2A%0D%0A%0D%0A%F0%9F%93%8B+%2AN%C3%BAmero+de+Pedido%3A%2A+%2300000...
+[09-Sep-2025 04:12:25 Europe/Berlin] Pedido creado exitosamente con ID: 9
+[09-Sep-2025 04:14:23 Europe/Berlin] Iniciando procesamiento de pedido - IP: 192.168.0.65
+[09-Sep-2025 04:14:23 Europe/Berlin] Carrito encontrado: [{"id":7,"name":"eiggis","price":"150000.00","compare_price":"200000.00","discount_percentage":25,"is_on_sale":true,"quantity":1,"image":"uploads\/products\/68b5e1a30557e_1756750243.png","variant":null}]
+[09-Sep-2025 04:14:23 Europe/Berlin] Configuraciones WhatsApp obtenidas: {"whatsapp_number":"573008061655","store_name":"Odisea Makeup","tax_rate":"19","shipping_cost":"15000","shipping_free_threshold":50000,"whatsapp_message_template":"\ud83d\udecd\ufe0f *NUEVO PEDIDO - {STORE_NAME}*\r\n\r\n\ud83d\udccb *N\u00famero de Pedido:* #{ORDER_NUMBER}\r\n\ud83d\udcc5 *Fecha:* {DATE}\r\n\r\n\ud83d\udc64 *DATOS DEL CLIENTE*\r\n\u2022 *Nombre:* {CUSTOMER_NAME}\r\n\u2022 *Tel\u00e9fono:* {CUSTOMER_PHONE}\r\n\u2022 *Email:* {CUSTOMER_EMAIL}\r\n\u2022 *C\u00e9dula:* {CUSTOMER_CEDULA}\r\n\r\n\ud83d\udccd *DIRECCI\u00d3N DE ENV\u00cdO*\r\n\u2022 *Departamento:* {SHIPPING_DEPARTMENT}\r\n\u2022 *Ciudad:* {SHIPPING_CITY}\r\n\u2022 *Direcci\u00f3n:* {SHIPPING_ADDRESS}\r\n\r\n\ud83d\uded2 *PRODUCTOS PEDIDOS*\r\n{PRODUCTS_LIST}\r\n\r\n\ud83d\udcb0 *RESUMEN DE COSTOS*\r\n\u2022 Subtotal: ${SUBTOTAL}\r\n\u2022 IVA ({TAX_RATE}%): ${TAX}\r\n\u2022 Env\u00edo: {SHIPPING}\r\n\u2022 *TOTAL: ${TOTAL}*\r\n\r\n\ud83d\udcb3 *M\u00c9TODO DE PAGO*\r\nPago contra entrega \ud83d\ude9a\r\n(Efectivo o transferencia al recibir)\r\n\r\n{NOTES}\u2705 *\u00a1Hola! Este es mi pedido desde la p\u00e1gina web.*\r\n\u00bfPodr\u00edas confirmarme la disponibilidad y tiempo de entrega?\r\n\r\n\u00a1Gracias! \ud83d\ude0a"}
+[09-Sep-2025 04:14:23 Europe/Berlin] Conexión a BD exitosa
+[09-Sep-2025 04:14:23 Europe/Berlin] Validando stock para: [{"product_id":7,"quantity":1}]
+[09-Sep-2025 04:14:23 Europe/Berlin] Transacción iniciada correctamente
+[09-Sep-2025 04:14:23 Europe/Berlin] Error en recordMovement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[09-Sep-2025 04:14:23 Europe/Berlin] Error registrando movimiento de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[09-Sep-2025 04:14:23 Europe/Berlin] Transacción confirmada exitosamente, orden creada con ID: 10
+[09-Sep-2025 04:14:23 Europe/Berlin] Mensaje WhatsApp generado (primeros 200 chars): 🛍️ *NUEVO PEDIDO - Odisea Makeup*
+
+📋 *Número de Pedido:* #000010
+📅 *Fecha:* 09/09/2025 04:14
+
+👤 *DATOS DEL CLIENTE*
+• *Nombre:* Isacac Camilo
+• *Teléfono:* 3008061655
+• *
+[09-Sep-2025 04:14:23 Europe/Berlin] Número WhatsApp a usar: 573008061655
+[09-Sep-2025 04:14:23 Europe/Berlin] URL WhatsApp generada: https://wa.me/573008061655?text=%F0%9F%9B%8D%EF%B8%8F+%2ANUEVO+PEDIDO+-+Odisea+Makeup%2A%0D%0A%0D%0A%F0%9F%93%8B+%2AN%C3%BAmero+de+Pedido%3A%2A+%23000...
+[09-Sep-2025 04:14:23 Europe/Berlin] Pedido creado exitosamente con ID: 10
+[03-Oct-2025 05:15:55 Europe/Berlin] Iniciando procesamiento de pedido - IP: ::1
+[03-Oct-2025 05:15:55 Europe/Berlin] Carrito encontrado: [{"id":14,"name":"Samsung Galaxy S24 Ultra","price":"899.99","quantity":1,"image":"assets\/images\/galaxy-s24-ultra.jpg"}]
+[03-Oct-2025 05:15:55 Europe/Berlin] Configuraciones WhatsApp obtenidas: {"whatsapp_number":"573008061655","store_name":"Odisea Makeup","tax_rate":"19","shipping_cost":"15000","shipping_free_threshold":50000,"whatsapp_message_template":"\ud83d\udecd\ufe0f *NUEVO PEDIDO - {STORE_NAME}*\r\n\r\n\ud83d\udccb *N\u00famero de Pedido:* #{ORDER_NUMBER}\r\n\ud83d\udcc5 *Fecha:* {DATE}\r\n\r\n\ud83d\udc64 *DATOS DEL CLIENTE*\r\n\u2022 *Nombre:* {CUSTOMER_NAME}\r\n\u2022 *Tel\u00e9fono:* {CUSTOMER_PHONE}\r\n\u2022 *Email:* {CUSTOMER_EMAIL}\r\n\u2022 *C\u00e9dula:* {CUSTOMER_CEDULA}\r\n\r\n\ud83d\udccd *DIRECCI\u00d3N DE ENV\u00cdO*\r\n\u2022 *Departamento:* {SHIPPING_DEPARTMENT}\r\n\u2022 *Ciudad:* {SHIPPING_CITY}\r\n\u2022 *Direcci\u00f3n:* {SHIPPING_ADDRESS}\r\n\r\n\ud83d\uded2 *PRODUCTOS PEDIDOS*\r\n{PRODUCTS_LIST}\r\n\r\n\ud83d\udcb0 *RESUMEN DE COSTOS*\r\n\u2022 Subtotal: ${SUBTOTAL}\r\n\u2022 IVA ({TAX_RATE}%): ${TAX}\r\n\u2022 Env\u00edo: {SHIPPING}\r\n\u2022 *TOTAL: ${TOTAL}*\r\n\r\n\ud83d\udcb3 *M\u00c9TODO DE PAGO*\r\nPago contra entrega \ud83d\ude9a\r\n(Efectivo o transferencia al recibir)\r\n\r\n{NOTES}\u2705 *\u00a1Hola! Este es mi pedido desde la p\u00e1gina web.*\r\n\u00bfPodr\u00edas confirmarme la disponibilidad y tiempo de entrega?\r\n\r\n\u00a1Gracias! \ud83d\ude0a"}
+[03-Oct-2025 05:15:55 Europe/Berlin] Conexión a BD exitosa
+[03-Oct-2025 05:15:55 Europe/Berlin] Validando stock para: [{"product_id":14,"quantity":1}]
+[03-Oct-2025 05:15:55 Europe/Berlin] Transacción iniciada correctamente
+[03-Oct-2025 05:15:55 Europe/Berlin] Error en recordMovement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[03-Oct-2025 05:15:55 Europe/Berlin] Error registrando movimiento de inventario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[03-Oct-2025 05:15:55 Europe/Berlin] Transacción confirmada exitosamente, orden creada con ID: 11
+[03-Oct-2025 05:15:55 Europe/Berlin] Mensaje WhatsApp generado (primeros 200 chars): 🛍️ *NUEVO PEDIDO - Odisea Makeup*
+
+📋 *Número de Pedido:* #000011
+📅 *Fecha:* 03/10/2025 05:15
+
+👤 *DATOS DEL CLIENTE*
+• *Nombre:* isaac montalvo
+• *Teléfono:* 1234567890
+• 
+[03-Oct-2025 05:15:55 Europe/Berlin] Número WhatsApp a usar: 573008061655
+[03-Oct-2025 05:15:55 Europe/Berlin] URL WhatsApp generada: https://wa.me/573008061655?text=%F0%9F%9B%8D%EF%B8%8F+%2ANUEVO+PEDIDO+-+Odisea+Makeup%2A%0D%0A%0D%0A%F0%9F%93%8B+%2AN%C3%BAmero+de+Pedido%3A%2A+%23000...
+[03-Oct-2025 05:15:55 Europe/Berlin] Pedido creado exitosamente con ID: 11

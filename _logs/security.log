@@ -1,0 +1,4 @@
+2025-09-02 12:37:57 - FAILED LOGIN - Email: admin@odisea.com - IP: ::1 - Reason: Invalid credentials
+2025-09-02 19:59:25 - RATE LIMIT - Action: review - IP: ::1 - Attempts: 10
+2025-09-02 20:05:31 - RATE LIMIT - Action: review - IP: ::1 - Attempts: 5
+2025-09-02 14:37:08 - RATE LIMIT - Action: newsletter_subscribe - IP: ::1 - Attempts: 5

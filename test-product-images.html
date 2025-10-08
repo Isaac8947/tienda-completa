@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Images</title>
+</head>
+<body>
+    <h1>Test Product Images</h1>
+    
+    <h2>Testing individual images:</h2>
+    <div>
+        <h3>uploads/products/samsung-galaxy-s24-ultra.svg</h3>
+        <img src="uploads/products/samsung-galaxy-s24-ultra.svg" alt="Samsung Galaxy" style="width: 100px; height: 100px; border: 1px solid #ccc;">
+    </div>
+    
+    <div>
+        <h3>uploads/products/macbook-air-m3.svg</h3>
+        <img src="uploads/products/macbook-air-m3.svg" alt="MacBook" style="width: 100px; height: 100px; border: 1px solid #ccc;">
+    </div>
+    
+    <div>
+        <h3>uploads/products/airpods-pro-3.svg</h3>
+        <img src="uploads/products/airpods-pro-3.svg" alt="AirPods" style="width: 100px; height: 100px; border: 1px solid #ccc;">
+    </div>
+    
+    <div>
+        <h3>assets/images/placeholder.svg (fallback)</h3>
+        <img src="assets/images/placeholder.svg" alt="Placeholder" style="width: 100px; height: 100px; border: 1px solid #ccc;">
+    </div>
+    
+    <script>
+        // Verificar si las imágenes se cargan correctamente
+        document.querySelectorAll('img').forEach((img, index) => {
+            img.onload = function() {
+                console.log(`Image ${index + 1} loaded successfully: ${this.src}`);
+            };
+            img.onerror = function() {
+                console.error(`Image ${index + 1} failed to load: ${this.src}`);
+                this.style.backgroundColor = '#f0f0f0';
+                this.alt = 'Failed to load: ' + this.src;
+            };
+        });
+    </script>
+</body>
+</html>

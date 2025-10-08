@@ -1,0 +1,15 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="url(#gradient2)"/>
+  <defs>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdf2f8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fce7f3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <g opacity="0.4">
+    <ellipse cx="200" cy="150" rx="35" ry="45" fill="#f9a8d4"/>
+    <rect x="170" y="210" width="60" height="10" rx="5" fill="#f9a8d4"/>
+    <rect x="180" y="235" width="40" height="6" rx="3" fill="#f9a8d4"/>
+  </g>
+  <text x="200" y="320" text-anchor="middle" fill="#be185d" font-family="Arial, sans-serif" font-size="14" font-weight="500">Maquillaje</text>
+</svg>

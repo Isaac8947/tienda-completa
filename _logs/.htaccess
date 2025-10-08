@@ -1,0 +1,6 @@
+Order Deny,Allow
+Deny from all
+<Files "*.log">
+    Order Deny,Allow
+    Deny from all
+</Files>

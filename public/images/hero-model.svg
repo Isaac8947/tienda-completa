@@ -1,0 +1,52 @@
+<svg width="400" height="600" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="600" fill="url(#heroGradient)"/>
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdf2f8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#fce7f3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f3e8ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Woman silhouette -->
+  <g opacity="0.6">
+    <!-- Head -->
+    <ellipse cx="200" cy="120" rx="35" ry="45" fill="#ec4899"/>
+    <!-- Hair -->
+    <path d="M165 100 Q200 80 235 100 Q240 110 235 130 Q200 120 165 130 Z" fill="#be185d"/>
+    <!-- Body -->
+    <rect x="185" y="165" width="30" height="80" rx="15" fill="#ec4899"/>
+    <!-- Arms -->
+    <ellipse cx="165" cy="190" rx="12" ry="30" fill="#ec4899"/>
+    <ellipse cx="235" cy="190" rx="12" ry="30" fill="#ec4899"/>
+    <!-- Dress/skirt -->
+    <path d="M170 245 Q200 250 230 245 Q240 300 200 320 Q160 300 170 245 Z" fill="#f472b6"/>
+    <!-- Legs -->
+    <rect x="190" y="320" width="8" height="60" fill="#ec4899"/>
+    <rect x="202" y="320" width="8" height="60" fill="#ec4899"/>
+  </g>
+  
+  <!-- Makeup elements -->
+  <g opacity="0.4">
+    <!-- Lipstick -->
+    <rect x="80" y="200" width="15" height="40" rx="7" fill="#f59e0b"/>
+    <rect x="82" y="190" width="11" height="15" rx="5" fill="#dc2626"/>
+    
+    <!-- Mascara -->
+    <rect x="320" y="180" width="8" height="50" rx="4" fill="#374151"/>
+    <ellipse cx="324" cy="170" rx="6" ry="8" fill="#1f2937"/>
+    
+    <!-- Eyeshadow palette -->
+    <rect x="300" y="300" width="60" height="40" rx="8" fill="#6b7280"/>
+    <circle cx="315" cy="315" r="8" fill="#ec4899"/>
+    <circle cx="330" cy="315" r="8" fill="#a855f7"/>
+    <circle cx="345" cy="315" r="8" fill="#3b82f6"/>
+    
+    <!-- Foundation bottle -->
+    <rect x="60" y="350" width="20" height="35" rx="10" fill="#fbbf24"/>
+    <rect x="65" y="340" width="10" height="15" rx="5" fill="#f59e0b"/>
+  </g>
+  
+  <text x="200" y="520" text-anchor="middle" fill="#be185d" font-family="serif" font-size="24" font-weight="600">Belleza Natural</text>
+  <text x="200" y="550" text-anchor="middle" fill="#9333ea" font-family="sans-serif" font-size="16">Tu look perfecto te espera</text>
+</svg>

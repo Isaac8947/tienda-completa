@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Login y Reseñas</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .section { margin-bottom: 30px; padding: 20px; border: 1px solid #ddd; }
+        .error { color: red; }
+        .success { color: green; }
+        form { margin: 10px 0; }
+        input, textarea { display: block; margin: 5px 0; padding: 8px; width: 300px; }
+        button { padding: 10px 20px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Test Sistema de Reseñas</h1>
+    
+    <div class="section">
+        <h2>1. Estado de la Sesión</h2>
+        <div id="sessionStatus">Cargando...</div>
+        <button onclick="checkSession()">Actualizar Estado</button>
+    </div>
+    
+    <div class="section">
+        <h2>2. Login Rápido (Solo para pruebas)</h2>
+        <form id="quickLogin">
+            <input type="email" name="email" placeholder="Email" value="test@example.com">
+            <input type="password" name="password" placeholder="Password" value="123456">
+            <button type="submit">Login</button>
+        </form>
+        <div id="loginResult"></div>
+    </div>
+    
+    <div class="section">
+        <h2>3. Enviar Reseña</h2>
+        <form id="reviewForm">
+            <input type="number" name="product_id" placeholder="Product ID" value="14">
+            <input type="number" name="rating" placeholder="Rating (1-5)" value="5" min="1" max="5">
+            <input type="text" name="title" placeholder="Título" value="Excelente producto">
+            <textarea name="comment" placeholder="Comentario">Esta es una reseña de prueba del producto</textarea>
+            <button type="submit">Enviar Reseña</button>
+        </form>
+        <div id="reviewResult"></div>
+    </div>
+
+    <script>
+    // Función para verificar sesión
+    async function checkSession() {
+        try {
+            const response = await fetch('debug-session.php');
+            const text = await response.text();
+            document.getElementById('sessionStatus').innerHTML = '<pre>' + text + '</pre>';
+        } catch (error) {
+            document.getElementById('sessionStatus').innerHTML = '<div class="error">Error: ' + error.message + '</div>';
+        }
+    }
+
+    // Login form
+    document.getElementById('quickLogin').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        
+        try {
+            const response = await fetch('login-new.php', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const text = await response.text();
+            document.getElementById('loginResult').innerHTML = '<pre>' + text + '</pre>';
+            
+            // Actualizar estado de sesión
+            setTimeout(checkSession, 1000);
+        } catch (error) {
+            document.getElementById('loginResult').innerHTML = '<div class="error">Error: ' + error.message + '</div>';
+        }
+    });
+
+    // Review form
+    document.getElementById('reviewForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        
+        try {
+            const response = await fetch('api/reviews/create.php', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                document.getElementById('reviewResult').innerHTML = '<div class="success">' + result.message + '</div>';
+            } else {
+                document.getElementById('reviewResult').innerHTML = '<div class="error">' + result.message + '</div>';
+            }
+            
+            if (result.debug) {
+                document.getElementById('reviewResult').innerHTML += '<pre>Debug: ' + JSON.stringify(result.debug, null, 2) + '</pre>';
+            }
+            
+        } catch (error) {
+            document.getElementById('reviewResult').innerHTML = '<div class="error">Error: ' + error.message + '</div>';
+        }
+    });
+
+    // Cargar estado inicial
+    checkSession();
+    </script>
+</body>
+</html>

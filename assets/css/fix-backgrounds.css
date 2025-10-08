@@ -1,0 +1,117 @@
+/* Estilos específicos con la nueva paleta luxury nude */
+
+/* Backgrounds completos */
+body {
+  background-color: #fefefe !important;
+  color: #8a6657 !important;
+}
+
+/* Sección hero con gradient luxury */
+section.relative.overflow-hidden.bg-gradient-to-br.from-primary-50.via-white.to-secondary-50 {
+  background: linear-gradient(135deg, #faf7f5 0%, #ffffff 50%, #fdfcfa 100%) !important;
+  min-height: 100vh !important;
+}
+
+/* Elementos flotantes con colores elegantes */
+div.absolute.-top-4.-right-4.w-20.h-20.bg-gradient-to-br.from-primary-400.to-secondary-400.rounded-full.opacity-20.animate-bounce-slow {
+  background: linear-gradient(135deg, #c9a196, #d4b896) !important;
+  opacity: 0.4 !important;
+  animation: bounce-slow 4s infinite !important;
+}
+
+div.absolute.-bottom-8.-left-8.w-32.h-32.bg-gradient-to-br.from-accent-400.to-primary-400.rounded-full.opacity-10.animate-pulse-slow {
+  background: linear-gradient(135deg, #c19590, #c9a196) !important;
+  opacity: 0.3 !important;
+  animation: pulse-slow 5s infinite !important;
+}
+
+/* Sección con background elegante */
+section.py-16.bg-gradient-to-br.from-primary-50.to-secondary-50 {
+  background: linear-gradient(135deg, #faf7f5 0%, #fdfcfa 100%) !important;
+  padding: 5rem 0 !important;
+}
+
+/* Newsletter section luxury */
+section.py-16.bg-gradient-to-r.from-primary-500.to-secondary-500 {
+  background: linear-gradient(135deg, #b08d80, #c4a575) !important;
+  color: white !important;
+}
+
+/* Elementos con animaciones flotantes elegantes */
+.animate-float {
+  animation: float 10s ease-in-out infinite !important;
+}
+
+div.absolute.top-8.-left-8.bg-white.rounded-2xl.shadow-lg.p-4.animate-float {
+  animation: float 10s ease-in-out infinite !important;
+  animation-delay: 1.5s !important;
+  box-shadow: 0 12px 40px rgba(176, 141, 128, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(176, 141, 128, 0.1) !important;
+}
+
+div.absolute.bottom-16.-right-8.bg-white.rounded-2xl.shadow-lg.p-4.animate-float {
+  animation: float 10s ease-in-out infinite !important;
+  animation-delay: 3s !important;
+  box-shadow: 0 12px 40px rgba(176, 141, 128, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(176, 141, 128, 0.1) !important;
+}
+
+/* Asegurar que los gradientes de texto funcionen */
+span.bg-gradient-to-r.from-primary-500.to-secondary-500.text-white {
+  background: linear-gradient(to right, #e879f9, #fbbf24) !important;
+  color: white !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 9999px !important;
+}
+
+span.bg-gradient-to-r.from-primary-600.to-secondary-600.bg-clip-text.text-transparent {
+  background: linear-gradient(to right, #d946ef, #f59e0b) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Newsletter section */
+section.py-16.bg-gradient-to-r.from-primary-500.to-secondary-500 {
+  background: linear-gradient(135deg, #e879f9, #fbbf24) !important;
+  color: white !important;
+}
+
+/* Asegurar visibilidad de elementos con opacidad */
+.opacity-20 {
+  opacity: 0.3 !important;
+}
+
+.opacity-10 {
+  opacity: 0.2 !important;
+}
+
+/* Efectos de hover mejorados */
+.hover\:shadow-xl:hover {
+  box-shadow: 0 20px 25px -5px rgba(232, 121, 249, 0.1), 0 10px 10px -5px rgba(232, 121, 249, 0.04) !important;
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05) !important;
+}
+
+.hover\:scale-110:hover {
+  transform: scale(1.1) !important;
+}
+
+/* Transiciones suaves */
+.transition-all {
+  transition: all 0.3s ease !important;
+}
+
+.duration-300 {
+  transition-duration: 300ms !important;
+}
+
+.duration-500 {
+  transition-duration: 500ms !important;
+}

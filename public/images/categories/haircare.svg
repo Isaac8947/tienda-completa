@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14b8a6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="45" fill="url(#hairGrad)" opacity="0.1"/>
+  <path d="M 30 20 Q 35 15 40 20 Q 45 10 50 20 Q 55 10 60 20 Q 65 15 70 20 Q 75 25 70 40 Q 65 60 60 80 Q 55 85 50 80 Q 45 85 40 80 Q 35 60 30 40 Q 25 25 30 20 Z" fill="url(#hairGrad)" opacity="0.8"/>
+  <path d="M 35 25 Q 40 20 45 25 Q 50 15 55 25 Q 60 20 65 25" stroke="white" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M 40 40 Q 50 35 60 40" stroke="white" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M 42 55 Q 50 50 58 55" stroke="white" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <circle cx="45" cy="30" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="55" cy="30" r="1.5" fill="white" opacity="0.8"/>
+</svg>
