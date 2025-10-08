@@ -120,5 +120,47 @@ Los archivos de test están en `/_tests/` para debugging.
 - ✅ Sistema de autenticación
 - ✅ Responsive design
 
+## 🤝 Contribuciones y Colaboración
+
+¡Este proyecto está **abierto a contribuciones** de la comunidad! 🌟
+
+### 💡 ¿Cómo Puedes Ayudar?
+
+**Estoy buscando colaboradores que me ayuden a optimizar y mejorar el proyecto:**
+
+- 🚀 **Optimización de performance** - Mejoras en velocidad y eficiencia
+- 🔒 **Seguridad** - Implementar mejores prácticas de seguridad
+- 📱 **Mobile optimization** - Mejorar experiencia en dispositivos móviles
+- 🎨 **UX/UI** - Refinamiento visual y de experiencia de usuario
+- 🔍 **SEO** - Mejoras en posicionamiento web
+- 🐛 **Bug fixes** - Identificar y corregir errores
+- 📖 **Documentación** - Mejorar guías y documentación
+
+### 📋 Cómo Contribuir
+
+1. **Lee la [Guía de Contribución](CONTRIBUTING.md)** 📖
+2. **Haz fork del repositorio** 🍴
+3. **Crea una rama para tu mejora** 🌿
+4. **Implementa tus cambios** ⚡
+5. **Envía un pull request** 📤
+
+### 🏆 Reconocimiento
+
+- Todos los contribuyentes aparecen en [CONTRIBUTORS.md](CONTRIBUTORS.md)
+- Créditos en el código donde aplique
+- Reconocimiento en futuras versiones
+
+**¿Tienes ideas para mejorar el proyecto?** ¡Contáctame en catla6273@gmail.com!
+
+## ⚖️ Licencia
+
+Este proyecto usa una **Licencia de Propiedad con Contribuciones Abiertas**.
+
+- ✅ **Permitido**: Estudiar código, contribuir mejoras, usar como referencia educativa
+- ❌ **Restringido**: Uso comercial sin autorización, redistribuir como proyecto propio
+- 🤝 **Contribuciones**: Bienvenidas y reconocidas, manteniendo créditos originales
+
+Ver el archivo [LICENSE](LICENSE) para términos completos.
+
 ---
-*Proyecto organizado y limpio - $(Get-Date)*
+*Proyecto organizado y limpio - Open Source con Licencia Propietaria*
