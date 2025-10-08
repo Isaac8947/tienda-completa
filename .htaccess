@@ -1,8 +1,14 @@
-# Configuración para Odisea Makeup Store
-# Archivo .htaccess para manejo de URLs y redirecciones
+# Configuración para Odisea Makeup Store - Estructura Reorganizada
+# Archivo .htaccess para front controller y seguridad mejorada
 
 # Habilitar el motor de reescritura
 RewriteEngine On
+RewriteBase /
+
+# Redirigir todo el tráfico al front controller en public/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php [QSA,L]
 
 # Configuración de seguridad básica
 Options -Indexes
@@ -14,11 +20,19 @@ ServerSignature Off
     Deny from all
 </Files>
 
-# Proteger archivos de configuración
-<FilesMatch "^(config|includes|models)/">
-    Order allow,deny
+# Proteger archivos de configuración y documentación
+<FilesMatch "\.(env|log|sql|md)$">
+    Order Allow,Deny
     Deny from all
 </FilesMatch>
+
+# Proteger directorios sensibles
+RedirectMatch 403 ^/config/
+RedirectMatch 403 ^/database/
+RedirectMatch 403 ^/storage/logs/
+RedirectMatch 403 ^/tests/
+RedirectMatch 403 ^/docs/
+RedirectMatch 403 ^/app/
 
 # Proteger archivos PHP en carpetas específicas
 <FilesMatch "^(_tests|_utils|_backups|_deprecated)/.*\.php$">

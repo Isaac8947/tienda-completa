@@ -1,28 +1,48 @@
+# === ESTRUCTURA REORGANIZADA - ODISEA MAKEUP STORE ===
+
 # Archivos de configuración sensibles
 config/database.php
 config/config.php
+config/db_config.php
+config/keys.php
+config/*.local.php
 
-# Archivos de sesión y cache
+# Storage reorganizado - Cache, logs y sesiones
+storage/cache/*
+!storage/cache/.htaccess
+storage/logs/*
+!storage/logs/.htaccess
+storage/sessions/*
+!storage/sessions/.htaccess
 /cache/*
 !/cache/.htaccess
-/sessions/*
-!/sessions/.htaccess
-
-# Logs
 /logs/*
 !/logs/.htaccess
 /_logs/*
 !/_logs/.htaccess
 
-# Uploads y archivos subidos por usuarios
+# Uploads reorganizados
+public/uploads/temp/*
+!public/uploads/temp/.htaccess
+public/uploads/cache/*
+!public/uploads/cache/.htaccess
 /uploads/temp/*
 !/uploads/temp/.htaccess
 /uploads/cache/*
 !/uploads/cache/.htaccess
 
-# Backups (pueden contener información sensible)
+# Tests y debugging (mantener estructura)
+tests/debug/output/
+tests/debug/temp/
+tests/debug/*.tmp
+tests/results/
+
+# Backups reorganizados
 /_backups/*
 !/_backups/README.md
+backup/
+*.backup
+*.bak
 
 # Archivos del sistema operativo
 .DS_Store
