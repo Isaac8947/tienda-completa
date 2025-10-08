@@ -16,7 +16,7 @@
 
 - **Animaciones Fluidas**: Scroll animations, hover effects y transiciones suaves
 
-Este proyecto ha sido **completamente reorganizado** para seguir estándares profesionales modernos. **Muchos archivos han cambiado de ubicación**.- **UI Moderna**: Uso de Tailwind CSS con gradientes y efectos visuales avanzados
+Este proyecto ha sido **completamente reorganizado** para seguir estándares profesionales modernos. **Muchos archivos han cambiado de ubicación**.- **UI Moderna**: Uso de Tailwind CSS con gradientes y efectos visuales avanzados **Nota**: solo cambien la ubicion de los archivos tuve que reorganizar todo, espero y me comprendan.
 
 - **Navigation Consistent**: Menú móvil unificado en todas las páginas
 
